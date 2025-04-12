@@ -1,5 +1,7 @@
 export const Advantages = () => {
     return (
-        <section>Advantages</section>
-    )
+        <section>
+            Переваги
+        </section>
+    );
 }
