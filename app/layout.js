@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="uk">
       <body
-        className={`${archivo.variable} ${archivoBlack.variable} antialiased bg-black text-main text-sm xl:text-xl max-w-[375px] xl:max-w-[1440px]`}
+        className={`${archivo.variable} ${archivoBlack.variable} antialiased bg-black text-main text-sm xl:text-xl max-w-[375px] xl:max-w-[1440px] mx-auto`}
       >
         <Header />
         <main>
