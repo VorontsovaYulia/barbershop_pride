@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"],
+      "@icons/*": ["./public/icons/*"],
+      "@gallery/*": ["./public/gallery/*"],
+      "@images/*": ["./public/images/*"]
+    }
+  }
+}
