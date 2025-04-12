@@ -4,7 +4,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
 export const archivo = Archivo({
-  subsets: ["latin", "cyrillic"], // если нужна кириллица
+  subsets: ["latin"], // если нужна кириллица
   style: ["normal", "italic"],    // обязательно, если хочешь Italic
   weight: ["400"],         // 400 — Regular, 700 — Bold (можно выбрать нужные)
   variable: "--font-archivo",
@@ -13,7 +13,7 @@ export const archivo = Archivo({
 
 export const archivoBlack = Archivo_Black({
   weight: ["400"], // Archivo_Black поддерживает только одно начертание (Black)
-  subsets: ["latin", "cyrillic"],
+  subsets: ["latin"],
   style: ["normal"], 
   variable: "--font-archivo-black",
   display: "swap",
