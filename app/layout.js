@@ -21,7 +21,7 @@ export const archivoBlack = Archivo_Black({
 
 export const metadata = {
   title: "Барбершоп Pride",
-  description: "Мужская парикмахерская в центре Киева. Барбершоп Pride предлагает стильные стрижки, бритьё опасной бритвой и уход за бородой. Мы рядом с метро Позняки.",
+  description: "Мужская парикмахерская в Киева на Нивках. Барбершоп Pride предлагает стильные стрижки, бритьё опасной бритвой и уход за бородой. Мы рядом с метро Нивки. ЖК Нивки-Парк",
 };
 
 export default function RootLayout({ children }) {
