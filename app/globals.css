@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-archivo: 'Archivo';
+  --font-openSans: 'Open Sans', sans-serif;
   --font-archivo-black: 'Archivo Black';
   --color-black: #081319;
   --color-white: #ffffff;
