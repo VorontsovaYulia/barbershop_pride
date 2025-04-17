@@ -4,7 +4,8 @@
       "@/*": ["./*"],
       "@icons/*": ["./public/icons/*"],
       "@gallery/*": ["./public/gallery/*"],
-      "@images/*": ["./public/images/*"]
+      "@images/*": ["./public/images/*"],
+      "@slider/*": ["./public/slider/*"]
     }
   }
 }
