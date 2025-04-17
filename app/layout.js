@@ -1,18 +1,18 @@
-import { Archivo, Archivo_Black } from "next/font/google";
+import { Open_Sans, Archivo_Black } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 
-export const archivo = Archivo({
-  subsets: ["latin"], // если нужна кириллица
-  style: ["normal", "italic"],    // обязательно, если хочешь Italic
-  weight: ["400"],         // 400 — Regular, 700 — Bold (можно выбрать нужные)
-  variable: "--font-archivo",
+export const openSans = Open_Sans({
+  subsets: ["latin"],
+  style: ["normal", "italic"], 
+  weight: ["400"],
+  variable: "--font-open-sans",
   display: "swap",
 });
 
 export const archivoBlack = Archivo_Black({
-  weight: ["400"], // Archivo_Black поддерживает только одно начертание (Black)
+  weight: ["400"],
   subsets: ["latin"],
   style: ["normal"], 
   variable: "--font-archivo-black",
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="uk">
       <body
-        className={`${archivo.variable} ${archivoBlack.variable} antialiased bg-black text-main text-sm xl:text-xl max-w-[375px] xl:max-w-[1440px] font-archivo font-normal mx-auto`}
+        className={`${openSans.variable} ${archivoBlack.variable} antialiased bg-black text-main text-sm xl:text-xl max-w-[375px] xl:max-w-[1440px] font-openSans font-normal mx-auto`}
       >
         <Header />
         <main>
