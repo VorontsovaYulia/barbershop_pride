@@ -42,7 +42,7 @@ export const Gallery = () => {
         infinite: true,
         arrows: false,
         speed: 500,
-        slidesToShow: isMobile ? 1.06 : 4.3,
+        slidesToShow: isMobile ? 1.06 : 4.35,
         responsive: [
             {
                 breakpoint: 1440,
@@ -70,8 +70,8 @@ export const Gallery = () => {
                                 <Image
                                     src={slide}
                                     alt={`Слайд ${index + 1}`}
-                                    width={isMobile ? 338 : 311}
-                                    height={isMobile ? 462 : 425}
+                                    width={isMobile ? 338 : 308}
+                                    height={isMobile ? 462 : 421}
                                     priority
                                 />
                             </div>
