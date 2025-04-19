@@ -55,21 +55,21 @@ export const Gallery = () => {
 
     return (
         <section className="py-10 xl:pt-20 xl:pb-[106px]">
-            <h2 className="block text-center mb-6 text-[22px]/[30px] italic xl:text-[36px]/[42px] xl:mb-10">
+            <h2 className="block text-center mb-6 xl:mb-10 italic text-[22px]/[30px] xl:text-[36px]/[42px] ">
                 ГАЛЕРЕЯ
             </h2>
 
             <div className="slider-container relative mx-auto max-w-[1440px]">
                 <Slider {...settings} ref={sliderRef}>
-                    {slides.map((slide, index) => (
+                    {slides.map((slide, i) => (
                         <div
                             key={index}
-                            className={`shrink-0 ${isMobile ? 'px-[8px]' : 'px-[12px]'}`}
+                            className={`shrink-0 ${isMobile ? 'px-2' : 'px-3'}`}
                         >
                             <div className="w-full">
                                 <Image
                                     src={slide}
-                                    alt={`Слайд ${index + 1}`}
+                                    alt={`Слайд ${i + 1}`}
                                     width={isMobile ? 338 : 308}
                                     height={isMobile ? 462 : 421}
                                     priority
