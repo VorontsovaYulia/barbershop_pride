@@ -63,7 +63,7 @@ export const Gallery = () => {
                 <Slider {...settings} ref={sliderRef}>
                     {slides.map((slide, i) => (
                         <div
-                            key={index}
+                            key={i}
                             className={`shrink-0 ${isMobile ? 'px-2' : 'px-3'}`}
                         >
                             <div className="w-full">
