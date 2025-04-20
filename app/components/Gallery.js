@@ -41,7 +41,7 @@ export const Gallery = () => {
         infinite: true,
         arrows: false,
         speed: 500,
-        slidesToShow: isMobile ? 1.06 : 4.34,
+        slidesToShow: isMobile ? 1.12 : 4.34,
         beforeChange: (_, newIndex) => {
             setCurrentSlide(newIndex);
         },
@@ -49,7 +49,7 @@ export const Gallery = () => {
             {
                 breakpoint: 1440,
                 settings: {
-                    slidesToShow: 1.06,
+                    slidesToShow: 1.12,
                 }
             }
         ]
@@ -68,6 +68,8 @@ export const Gallery = () => {
                 <Slider {...settings} ref={sliderRef}>
                     {slides.map((slide, i) => {
                         const isActive = i === currentSlide;
+                        const width = isMobile ? 320 : 310;
+                        const height = isMobile ? 460 : 420
 
                         return (
                             <div
@@ -75,13 +77,15 @@ export const Gallery = () => {
                                 className={`shrink-0 ${isMobile ? 'px-2' : 'px-3'} flex justify-center`}
                             >
                                 <div
-                                    className={`transition-all duration-500 ${!isMobile && isActive ? 'scale-[1.1] z-10' : 'scale-100 z-0'}`}
+                                    className={`transition-all duration-500 ${!isMobile && isActive && 'scale-[1.09]'}`}
+                                    style={{ width, height }}
                                 >
                                     <Image
                                         src={slide}
                                         alt={`Слайд ${i + 1}`}
-                                        width={isMobile ? 338 : 308}
-                                        height={isMobile ? 462 : 421}
+                                        width={width}
+                                        height={height}
+                                        className="object-cover w-full h-full"
                                         priority
                                     />
                                 </div>
