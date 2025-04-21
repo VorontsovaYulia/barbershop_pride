@@ -41,7 +41,7 @@ export const Gallery = () => {
         infinite: true,
         arrows: false,
         speed: 500,
-        slidesToShow: isMobile ? 1.12 : 4.34,
+        slidesToShow: isMobile ? 1.12 : 4.3,
         beforeChange: (_, newIndex) => {
             setCurrentSlide(newIndex);
         },
@@ -74,10 +74,10 @@ export const Gallery = () => {
                         return (
                             <div
                                 key={i}
-                                className={`shrink-0 ${isMobile ? 'px-2' : 'px-3'} flex justify-center`}
+                                className='shrink-0 flex justify-center'
                             >
                                 <div
-                                    className={`transition-all duration-500 ${!isMobile && isActive && 'scale-[1.09]'}`}
+                                    className={`transition-all duration-500 ${!isMobile && 'pr-3'} ${!isMobile && isActive && 'scale-[1.09]'}`}
                                     style={{ width, height }}
                                 >
                                     <Image
@@ -85,7 +85,7 @@ export const Gallery = () => {
                                         alt={`Слайд ${i + 1}`}
                                         width={width}
                                         height={height}
-                                        className="object-cover w-full h-full"
+                                        className={`object-cover w-full h-full `}
                                         priority
                                     />
                                 </div>
