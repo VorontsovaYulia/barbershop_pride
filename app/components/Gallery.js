@@ -36,6 +36,7 @@ export const Gallery = () => {
     const settings = {
         className: 'center',
         centerMode: true,
+        focusOnSelect: true,
         centerPadding: '0px',
         initialSlide: 2,
         infinite: true,
