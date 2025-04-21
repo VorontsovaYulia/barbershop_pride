@@ -63,7 +63,7 @@ export const Gallery = () => {
                 ГАЛЕРЕЯ
             </h2>
 
-            <div className="slider-container relative mx-auto max-w-[1440px] overflow-x-clip">
+            <div className="relative mx-auto max-w-[1440px] overflow-x-clip">
                 <style jsx global>{`div .slick-list {overflow: visible}`}</style>
 
                 <Slider {...settings} ref={sliderRef}>
@@ -78,7 +78,7 @@ export const Gallery = () => {
                                 className='shrink-0 flex justify-center'
                             >
                                 <div
-                                    className={`transition-all duration-500 ${!isMobile && 'pr-3'} ${!isMobile && isActive && 'scale-[1.09]'}`}
+                                    className={`transition-all duration-500 ${!isMobile && isActive && 'scale-[1.095] w-80 px-[9px]'}`}
                                     style={{ width, height }}
                                 >
                                     <Image
@@ -86,7 +86,7 @@ export const Gallery = () => {
                                         alt={`Слайд ${i + 1}`}
                                         width={width}
                                         height={height}
-                                        className={`object-cover w-full h-full `}
+                                        className='object-cover w-full h-full'
                                         priority
                                     />
                                 </div>
