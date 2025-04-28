@@ -1,13 +1,14 @@
 'use client';
 
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
-import { useRef, useEffect, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
-const slides = [
+const SLIDES = [
   '/slider/slide1.jpg',
   '/slider/slide2.jpg',
   '/slider/slide3.jpg',
@@ -18,93 +19,81 @@ const slides = [
 ];
 
 export const Gallery = () => {
-    const sliderRef = useRef(null);
     const [isMobile, setIsMobile] = useState(false);
-    const [currentSlide, setCurrentSlide] = useState(2);
-    const arrowSize = isMobile ? 32 : 40;
+    const [activeIndex, setActiveIndex] = useState(2);
+    const swiperRef = useRef(null);
 
     useEffect(() => {
-        const checkSize = () => setIsMobile(window.innerWidth < 1440);
-        checkSize();
-        window.addEventListener('resize', checkSize);
-        return () => window.removeEventListener('resize', checkSize);
+        const handleResize = () => setIsMobile(window.innerWidth < 1440);
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const handlePrev = () => sliderRef.current?.slickPrev();
-    const handleNext = () => sliderRef.current?.slickNext();
+    const slideSize = isMobile ? 320 : 310;
+    const centerSlideSize = 320;
+    const slideHeight = isMobile ? 460 : 420;
+    const centerSlideHeight = 460;
+    const gap = isMobile ? 16 : 24;
 
-    const settings = {
-        className: 'center',
-        centerMode: true,
-        focusOnSelect: true,
-        centerPadding: '0px',
-        initialSlide: 2,
-        infinite: true,
-        arrows: false,
-        speed: 500,
-        slidesToShow: isMobile ? 1.12 : 4.3,
-        beforeChange: (_, newIndex) => {
-            setCurrentSlide(newIndex);
-        },
-        responsive: [
-            {
-                breakpoint: 1440,
-                settings: {
-                    slidesToShow: 1.12,
-                }
-            }
-        ]
-    };
+    const goPrev = () => swiperRef.current?.slidePrev();
+    const goNext = () => swiperRef.current?.slideNext();
 
     return (
         <section className="py-10 xl:pt-20 xl:pb-[106px]">
+            <h2 className="text-center italic text-[22px]/[30px] xl:text-[36px]/[42px] mb-6 xl:mb-10">ГАЛЕРЕЯ</h2>
 
-            <h2 className="block text-center mb-6 xl:mb-14 italic text-[22px]/[30px] xl:text-[36px]/[42px]">
-                ГАЛЕРЕЯ
-            </h2>
-
-            <div className="relative mx-auto max-w-[1440px] overflow-x-clip">
-                <style jsx global>{`div .slick-list {overflow: visible}`}</style>
-
-                <Slider {...settings} ref={sliderRef}>
-                    {slides.map((slide, i) => {
-                        const isActive = i === currentSlide;
-                        const width = isMobile ? 320 : 310;
-                        const height = isMobile ? 460 : 420
-
-                        return (
+            <div className="relative max-w-[1440px] mx-auto overflow-hidden px-4">
+                <style jsx global>{`div .swiper-slide {display: flex}`}</style>
+                <Swiper
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+                    modules={[Navigation]}
+                    slidesPerView="auto"
+                    centeredSlides
+                    loop
+                    spaceBetween={gap}
+                    initialSlide={2}
+                    className="!overflow-visible"
+                >
+                    {SLIDES.map((src, index) => (
+                        <SwiperSlide
+                            key={index}
+                            className="flex items-center justify-center self-center"
+                            style={{
+                                width: !isMobile && index === activeIndex ? `${centerSlideSize}px` : `${slideSize}px`,
+                                height: !isMobile && index === activeIndex ? `${centerSlideHeight}px` : `${slideHeight}px`,
+                            }}
+                        >
                             <div
-                                key={i}
-                                className='shrink-0 flex justify-center'
+                                className="relative transition-all duration-500 ease-in-out"
+                                style={{
+                                    width: !isMobile && index === activeIndex ? `${centerSlideSize}px` : `${slideSize}px`,
+                                    height: !isMobile && index === activeIndex ? `${centerSlideHeight}px` : `${slideHeight}px`,
+                                }}
                             >
-                                <div
-                                    className={`transition-all duration-500 ${!isMobile && isActive && 'scale-[1.095] w-80 px-[9px]'}`}
-                                    style={{ width, height }}
-                                >
-                                    <Image
-                                        src={slide}
-                                        alt={`Слайд ${i + 1}`}
-                                        width={width}
-                                        height={height}
-                                        className='object-cover w-full h-full'
-                                        priority
-                                    />
-                                </div>
+                                <Image
+                                    src={src}
+                                    alt={`Slide ${index + 1}`}
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
                             </div>
-                        );
-                    })}
-                </Slider>
+                        </SwiperSlide>
+                    ))}
 
-                <div className="flex justify-between items-center mt-2 xl:mt-8 px-4 xl:px-18 h-8 xl:h-10">
-                    <button onClick={handlePrev} aria-label="стрілка назад">
-                        <BsArrowLeft size={arrowSize} className="fill-white hover:fill-hover active:fill-main" />
+                </Swiper>
+
+                <div className="flex justify-between items-center mt-4 px-4 xl:px-8">
+                    <button onClick={goPrev} aria-label="стрілка назад">
+                        <BsArrowLeft size={isMobile ? 32 : 40} className="fill-white hover:fill-hover active:fill-main" />
                     </button>
                     <span className="cursor-pointer text-center text-sm xl:text-base italic text-white">БІЛЬШЕ</span>
-                    <button onClick={handleNext} aria-label="стрілка вперед">
-                        <BsArrowRight size={arrowSize} className="fill-white hover:fill-hover active:fill-main" />
+                    <button onClick={goNext} aria-label="стрілка вперед">
+                        <BsArrowRight size={isMobile ? 32 : 40} className="fill-white hover:fill-hover active:fill-main" />
                     </button>
                 </div>
-
             </div>
         </section>
     );
