@@ -13,7 +13,6 @@
     "embla-carousel-react": "^8.6.0",
     "next": "15.3.0",
     "plugin": "^0.3.3",
-    "prettier": "^3.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
@@ -27,6 +26,8 @@
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4"
   }
 }
