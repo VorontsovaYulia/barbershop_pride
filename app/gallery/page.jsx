@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import { galleryItemsMobile, galleryItemsDesktop } from './data';
 
+export const metadata = {
+  title: "Галерея | Барбершоп Pride",
+};
+
 export default function Gallery() {
   return (
     <div className="px-6 pt-6 pb-4 xl:pt-10 xl:pb-21 xl:px-18">
