@@ -59,6 +59,7 @@ export const Gallery = () => {
                     slidesPerView="auto"
                     centeredSlides
                     loop
+                    speed={500}
                     spaceBetween={gap}
                     initialSlide={2}
                     className="!overflow-visible"
