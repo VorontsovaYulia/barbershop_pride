@@ -4,11 +4,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
-const SLIDES = [
+const slides = [
   '/slider/slide1.jpg',
   '/slider/slide2.jpg',
   '/slider/slide3.jpg',
@@ -40,7 +41,7 @@ export const Gallery = () => {
     const goNext = () => swiperRef.current?.slideNext();
 
     return (
-        <section className="py-10 xl:pt-20 xl:pb-[106px]">
+        <section id='gallery' className="py-10 xl:pt-20 xl:pb-[106px]">
             <h2 className="text-center italic text-[22px]/[30px] xl:text-[36px]/[42px] mb-6 xl:mb-10">ГАЛЕРЕЯ</h2>
 
             <div className="relative max-w-[1440px] mx-auto overflow-hidden px-4">
@@ -56,7 +57,7 @@ export const Gallery = () => {
                     initialSlide={2}
                     className="!overflow-visible"
                 >
-                    {SLIDES.map((src, index) => (
+                    {slides.map((src, index) => (
                         <SwiperSlide
                             key={index}
                             className="flex items-center justify-center self-center"
@@ -89,7 +90,7 @@ export const Gallery = () => {
                     <button onClick={goPrev} aria-label="стрілка назад">
                         <BsArrowLeft size={isMobile ? 32 : 40} className="fill-white hover:fill-hover active:fill-main" />
                     </button>
-                    <span className="cursor-pointer text-center text-sm xl:text-base italic text-white">БІЛЬШЕ</span>
+                    <Link href='/gallery' className="cursor-pointer text-center text-sm xl:text-base italic text-white hover:text-hover active:text-main">БІЛЬШЕ</Link>
                     <button onClick={goNext} aria-label="стрілка вперед">
                         <BsArrowRight size={isMobile ? 32 : 40} className="fill-white hover:fill-hover active:fill-main" />
                     </button>
