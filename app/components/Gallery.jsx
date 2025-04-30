@@ -8,16 +8,7 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const slides = [
-  '/slider/slide1.jpg',
-  '/slider/slide2.jpg',
-  '/slider/slide3.jpg',
-  '/slider/slide4.jpg',
-  '/slider/slide5.jpg',
-  '/slider/slide6.jpg',
-  '/slider/slide7.jpg',
-];
+import {slidesMobile, slidesDesktop} from './data'
 
 export const Gallery = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -31,9 +22,24 @@ export const Gallery = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const slideSize = isMobile ? 320 : 310;
-    const centerSlideSize = 320;
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (!swiperRef.current || swiperRef.current.destroyed) return;
+
+            if (e.key === 'ArrowLeft') {
+                swiperRef.current.slidePrev();
+            } else if (e.key === 'ArrowRight') {
+                swiperRef.current.slideNext();
+            }
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+        return () => document.removeEventListener('keydown', handleKeyDown);
+    }, []);
+
+    const slideWidth = isMobile ? 320 : 310;
     const slideHeight = isMobile ? 460 : 420;
+    const centerSlideWidth = 320;
     const centerSlideHeight = 460;
     const gap = isMobile ? 16 : 24;
 
@@ -57,32 +63,33 @@ export const Gallery = () => {
                     initialSlide={2}
                     className="!overflow-visible"
                 >
-                    {slides.map((src, index) => (
-                        <SwiperSlide
-                            key={index}
-                            className="flex items-center justify-center self-center"
-                            style={{
-                                width: !isMobile && index === activeIndex ? `${centerSlideSize}px` : `${slideSize}px`,
-                                height: !isMobile && index === activeIndex ? `${centerSlideHeight}px` : `${slideHeight}px`,
-                            }}
-                        >
-                            <div
-                                className="relative transition-all duration-500 ease-in-out"
-                                style={{
-                                    width: !isMobile && index === activeIndex ? `${centerSlideSize}px` : `${slideSize}px`,
-                                    height: !isMobile && index === activeIndex ? `${centerSlideHeight}px` : `${slideHeight}px`,
-                                }}
+                    {(isMobile ? slidesMobile : slidesDesktop).map((src, index) => {
+                        const isActive = !isMobile && index === activeIndex;
+                        const currentWidth = isActive ? centerSlideWidth : slideWidth;
+                        const currentHeight = isActive ? centerSlideHeight : slideHeight;
+
+                        return (
+                            <SwiperSlide
+                                key={index}
+                                className="flex items-center justify-center self-center"
+                                style={{ width: `${currentWidth}px`, height: `${currentHeight}px` }}
                             >
-                                <Image
-                                    src={src}
-                                    alt={`Slide ${index + 1}`}
-                                    fill
-                                    className="object-cover"
-                                    priority
-                                />
-                            </div>
-                        </SwiperSlide>
-                    ))}
+                                <div
+                                    className="relative transition-all duration-500 ease-in-out"
+                                    style={{ width: `${currentWidth}px`, height: `${currentHeight}px` }}
+                                >
+                                    <Image
+                                        src={src}
+                                        alt={`Слайд ${index + 1}`}
+                                        fill
+                                        sizes="(max-width: 1439px) 320px, (min-width: 1440px) 310px"
+                                        className="object-cover"
+                                        priority
+                                    />
+                                </div>
+                            </SwiperSlide>
+                        )
+                    })}
 
                 </Swiper>
 
