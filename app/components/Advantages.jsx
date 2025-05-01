@@ -32,7 +32,7 @@ export const Advantages = () => {
               className="flex flex-col items-center gap-y-4 xl:gap-y-6"
             >
               <Image
-                className="h-20 xl:w-22"
+                className="xl:h-20 xl:w-22"
                 src={item.icon}
                 alt={item.description}
                 unoptimized={true}
