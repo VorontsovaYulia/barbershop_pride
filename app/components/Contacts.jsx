@@ -4,7 +4,7 @@ export const Contacts = () => {
   return (
     <section className="xl:flex">
       <div className="px-6 pt-10 pb-12 xl:px-18 xl:pt-20">
-        <h2 className="text-center text-[22px]/[30px] italic xl:text-[36px]/[42px]">
+        <h2 className="text-center text-[22px]/[30px] italic xl:text-start xl:text-[36px]/[42px]">
           НАШІ КОНТАКТИ
         </h2>
         <ul className="my-6 flex flex-col gap-6 xl:my-[42px]">
@@ -21,7 +21,7 @@ export const Contacts = () => {
           </li>
           <li className="flex gap-4">
             <LuPhone className="h-5 w-5 items-center" />
-            <p>+380-99-777-40-99</p>
+            <a href="tel:+380997774099">+380-99-777-40-99</a>
           </li>
         </ul>
         <a
