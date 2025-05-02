@@ -36,7 +36,11 @@ export const Footer = () => {
         <div className="mt-8 flex items-center gap-2 xl:mt-0 xl:gap-4">
           <p>SOCIAL</p>
           <div className="bg-main h-px w-20"></div>
-          <a href="">
+          <a
+            href="https://www.instagram.com/pride_barbershop_kiyv/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
             <FaInstagram className="hover:fill-hover h-6 w-6 active:fill-white" />
           </a>
         </div>
