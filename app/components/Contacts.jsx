@@ -2,7 +2,7 @@ import { LuClock5, LuPhone, LuMapPin } from 'react-icons/lu';
 
 export const Contacts = () => {
   return (
-    <section>
+    <section className="xl:flex">
       <div className="px-6 pt-10 pb-12 xl:px-18 xl:pt-20">
         <h2 className="text-center text-[22px]/[30px] italic xl:text-[36px]/[42px]">
           НАШІ КОНТАКТИ
@@ -32,7 +32,15 @@ export const Contacts = () => {
           Онлайн запис
         </a>
       </div>
-      <div></div>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.183012554283!2d30.404716281909142!3d50.4563166301549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc435202de1d%3A0x935de67949eab8ad!2z0JHQtdGA0LXRgdGC0LXQudGB0YzQutC40Lkg0L_RgNC-0YHQv9C10LrRgiwgNjfQsCwg0JrQuNGX0LIsIDAzMDYy!5e0!3m2!1suk!2sua!4v1746210998099!5m2!1suk!2sua"
+          className="h-[476px] w-[375px] border-0 xl:w-[912px]"
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </section>
   );
 };
