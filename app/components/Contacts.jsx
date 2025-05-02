@@ -9,18 +9,19 @@ export const Contacts = () => {
         </h2>
         <ul className="my-6 flex flex-col gap-6 xl:my-[42px]">
           <li className="flex items-start gap-2 xl:gap-4">
-            <LuMapPin className="h-[22px] w-5 cursor-default" />
+            <LuMapPin className="h-5 w-5 cursor-default xl:h-7 xl:w-7" />
+
             <div>
               <p className="block">ЖК “НИВКИ-ПАРК”</p>{' '}
               <p className="block">Берестейський проспект 67 а, Київ</p>
             </div>
           </li>
           <li className="flex items-center gap-4">
-            <LuClock5 className="h-5 w-5 cursor-default" />
+            <LuClock5 className="h-5 w-5 cursor-default xl:h-7 xl:w-7" />
             <p>Графік роботи: 10:00 - 20:00 </p>
           </li>
           <li className="flex items-center gap-4">
-            <LuPhone className="h-5 w-5 cursor-default items-center" />
+            <LuPhone className="h-5 w-5 cursor-default items-center xl:h-7 xl:w-7" />
             <a
               href="tel:+380997774099"
               className="hover:text-hover active:text-white"
