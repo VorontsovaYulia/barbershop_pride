@@ -19,7 +19,7 @@ export const Contacts = () => {
             <LuClock5 className="h-5 w-5" />
             <p>Графік роботи: 10:00 - 20:00 </p>
           </li>
-          <li className="flex gap-4">
+          <li className="flex items-center gap-4">
             <LuPhone className="h-5 w-5 items-center" />
             <a href="tel:+380997774099">+380-99-777-40-99</a>
           </li>
