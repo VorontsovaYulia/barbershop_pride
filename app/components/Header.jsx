@@ -42,7 +42,11 @@ export const Header = () => {
           <TbTriangleInvertedFilled className="hover:fill-hover h-4 w-4 active:fill-white" />
         </div>
 
-        <button type="button" className="xl:hidden">
+        <button
+          type="button"
+          className="xl:hidden"
+          aria-label="Відкрити мобільне меню"
+        >
           <SlMenu
             className="hover:fill-hover h-8 w-8 active:fill-white"
             onClick={handleOpen}
