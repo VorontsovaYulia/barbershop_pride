@@ -52,7 +52,7 @@ export const Footer = () => {
         className="absolute bottom-4 left-4 mr-auto h-12 w-12 xl:hidden"
       />
       <div className="mx-auto flex items-center gap-2">
-        <FaRegCopyright className="h-4 w-4 fill-[#5F5A5A]" />
+        <FaRegCopyright className="h-4 w-4 cursor-default fill-[#5F5A5A]" />
         <p className="text-[10px] xl:text-sm">2025. All Rights Reserved</p>
       </div>
     </footer>
