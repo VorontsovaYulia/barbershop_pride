@@ -3,9 +3,14 @@
 import { useEffect } from 'react';
 import { IoClose } from 'react-icons/io5';
 import { IoLogoInstagram } from 'react-icons/io5';
-import { Navigation } from './Navigation';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { keys } from '@/app/lib/navLinks';
 
 export const MobMenu = ({ animation, onClose }) => {
+  const t = useTranslations('Header.navigation');
+  const c = useTranslations('Header');
+
   useEffect(() => {
     const handleKeyDown = event => {
       if (event.key === 'Escape') {
@@ -34,12 +39,26 @@ export const MobMenu = ({ animation, onClose }) => {
         animation ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
-      <button onClick={onClose} className="absolute top-8 right-4">
-        <IoClose className="hover:fill-hover h-12 w-12 active:fill-white" />
+      <button
+        onClick={onClose}
+        className="group absolute top-8 right-4"
+        aria-label={c('close')}
+      >
+        <IoClose className="group-hover-fill h-12 w-12" />
       </button>
 
       <div className="mt-[136px] flex flex-col items-center gap-8 text-[24px]/[30px]">
-        <Navigation onClose={onClose} />
+        {keys.map(key => (
+          <Link
+            key={key}
+            href={t(`${key}.link`)}
+            scroll={true}
+            className="hover-text"
+            onClick={onClose}
+          >
+            {t(`${key}.name`)}
+          </Link>
+        ))}
       </div>
 
       <div className="inline-flex items-center justify-end gap-4">
@@ -49,8 +68,9 @@ export const MobMenu = ({ animation, onClose }) => {
           href="https://www.instagram.com/pride_barbershop_kiyv/"
           target="_blank"
           rel="noopener noreferrer nofollow"
+          className="group"
         >
-          <IoLogoInstagram className="hover:fill-hover h-6 w-6 active:fill-white" />
+          <IoLogoInstagram className="group-hover-fill h-6 w-6" />
         </a>
       </div>
     </div>

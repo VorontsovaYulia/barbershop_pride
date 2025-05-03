@@ -1,22 +1,22 @@
-const navLinks = {
-  Майстри: './#barbers',
-  Послуги: './#services',
-  Галерея: './#gallery',
-  Контакти: './#contacts',
-};
+import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
+import { keys } from '@/app/lib/navLinks';
 
-export const Navigation = ({ onClose }) => {
+export const Navigation = async ({ onClose }) => {
+  const t = await getTranslations('Header.navigation');
+
   return (
     <>
-      {Object.keys(navLinks).map(name => (
-        <a
-          key={name}
-          href={navLinks[name]}
-          className="hover:text-hover active:text-white"
+      {keys.map(key => (
+        <Link
+          key={key}
+          href={t(`${key}.link`)}
+          scroll={true}
+          className="hover-text"
           onClick={onClose}
         >
-          {name}
-        </a>
+          {t(`${key}.name`)}
+        </Link>
       ))}
     </>
   );
