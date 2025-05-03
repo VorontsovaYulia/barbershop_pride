@@ -59,11 +59,11 @@ export const Barbers = () => {
           {barbers.map((item, idx) => (
             <li
               key={idx}
-              className="group relative flex w-78 flex-col items-end gap-y-1 xl:w-92"
+              className="group relative flex w-78 flex-col items-end gap-y-1 xl:w-92 xl:gap-y-4"
             >
               <Link
                 href="/"
-                className="flex h-88 w-78 justify-end xl:h-124 xl:w-92"
+                className="flex h-88 w-78 justify-end xl:h-108 xl:w-92"
               >
                 {/* Рамка */}
                 <span className="bloc mr-4 h-78 w-60 border-1 transition-opacity duration-0 ease-in-out group-hover:opacity-0 xl:mr-1 xl:h-95 xl:w-73"></span>
@@ -109,7 +109,7 @@ export const Barbers = () => {
                   alt={item.description_for_img}
                 />
               </Link>
-              <div className="flex h-10 flex-row items-center gap-x-2">
+              <div className="flex h-10 flex-row items-center gap-x-2 xl:gap-x-4">
                 <p className="text-[16px]/[20px] text-white uppercase italic">
                   {item.name}
                 </p>
