@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { galleryItemsMobile, galleryItemsDesktop } from './data';
+import { galleryItemsMobile, galleryItemsDesktop } from '../../lib/data';
 
 export const metadata = {
   title: "Галерея | Барбершоп Pride",
@@ -61,7 +61,7 @@ export default function Gallery() {
           if (item.type === 'text') {
             return (
               <li key={index} className="flex flex-col justify-center w-[300px] h-[380px]">
-                <h3 className="italic text-[16px] mb-4">{item.title}</h3>
+                <h2 className="italic text-[16px] mb-4">{item.title}</h2>
                 <p className="text-[16px]">{item.description}</p>
               </li>
             );
