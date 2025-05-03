@@ -4,14 +4,14 @@ import { FaRegCopyright, FaInstagram } from 'react-icons/fa6';
 
 export const Footer = () => {
   return (
-    <footer className="relative flex flex-col items-center justify-center px-4 pt-8 pb-4 xl:px-18 xl:pt-10 xl:pb-6">
-      <div className="mb-16 flex w-full flex-wrap items-center justify-center xl:mb-[18px]">
+    <footer className="relative flex flex-col justify-center px-4 pt-8 pb-4 xl:px-18 xl:pt-10 xl:pb-6">
+      <div className="mb-16 flex flex-wrap items-center justify-center xl:mb-[18px] xl:justify-between">
         <Image
           src={Logo}
           alt="Barbershop logo"
           className="hidden xl:block xl:h-20 xl:w-20"
         />
-        <ul className="flex gap-7 xl:mr-[206px] xl:ml-[310px] xl:gap-12">
+        <ul className="flex gap-7 xl:mr-[216px] xl:ml-[320px] xl:gap-12">
           <li>
             <a href="#barbers" className="hover:text-hover active:text-white">
               Майстри
@@ -34,14 +34,14 @@ export const Footer = () => {
           </li>
         </ul>
         <div className="mt-8 flex items-center gap-2 xl:mt-0 xl:gap-4">
-          <p>SOCIAL</p>
+          <p className="xl:text-[18px]">SOCIAL</p>
           <div className="bg-main h-px w-20"></div>
           <a
             href="https://www.instagram.com/pride_barbershop_kiyv/"
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <FaInstagram className="hover:fill-hover h-6 w-6 active:fill-white" />
+            <FaInstagram className="hover:fill-hover h-7 w-7 active:fill-white" />
           </a>
         </div>
       </div>
