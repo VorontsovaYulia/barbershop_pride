@@ -1,6 +1,7 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useTranslations } from 'next-intl';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -14,6 +15,8 @@ export const Gallery = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [activeIndex, setActiveIndex] = useState(2);
     const swiperRef = useRef(null);
+
+    const t = useTranslations('GallerySection');
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth < 1440);
@@ -48,7 +51,7 @@ export const Gallery = () => {
 
     return (
         <section id='gallery' className="py-10 xl:pt-20 xl:pb-[106px]">
-            <h2 className="text-center italic text-[22px]/[30px] xl:text-[36px]/[42px] mb-6 xl:mb-10">ГАЛЕРЕЯ</h2>
+            <h2 className="text-center uppercase italic text-[22px]/[30px] xl:text-[36px]/[42px] mb-6 xl:mb-10">{t('gallery')}</h2>
 
             <div className="relative max-w-[1440px] mx-auto overflow-hidden px-4">
                 <style jsx global>{`div .swiper-slide {display: flex}`}</style>
@@ -81,7 +84,7 @@ export const Gallery = () => {
                                 >
                                     <Image
                                         src={src}
-                                        alt={`Слайд ${index + 1}`}
+                                        alt={`${t('alt')} ${index + 1}`}
                                         fill
                                         sizes="(max-width: 1439px) 320px, (min-width: 1440px) 310px"
                                         className="object-cover"
@@ -95,11 +98,11 @@ export const Gallery = () => {
                 </Swiper>
 
                 <div className="flex justify-between items-center mt-4 px-4 xl:px-8">
-                    <button onClick={goPrev} aria-label="стрілка назад">
+                    <button onClick={goPrev} aria-label={t('left')}>
                         <BsArrowLeft size={isMobile ? 32 : 40} className="fill-white hover:fill-hover active:fill-main" />
                     </button>
-                    <Link href='/gallery' className="cursor-pointer text-center text-sm xl:text-base italic text-white hover:text-hover active:text-main">БІЛЬШЕ</Link>
-                    <button onClick={goNext} aria-label="стрілка вперед">
+                    <Link href='/gallery' className="cursor-pointer text-center uppercase text-sm xl:text-base italic text-white hover:text-hover active:text-main">{t('more')}</Link>
+                    <button onClick={goNext} aria-label={t('right')}>
                         <BsArrowRight size={isMobile ? 32 : 40} className="fill-white hover:fill-hover active:fill-main" />
                     </button>
                 </div>
