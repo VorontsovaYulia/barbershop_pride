@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-select": "^2.2.2",
     "next": "15.3.0",
+    "next-intl": "^4.1.0",
     "plugin": "^0.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -1,0 +1,17 @@
+{
+  "Header": {
+    "navigation": {
+      "barbers": { "name": "Barbers", "link": "./#barbers" },
+      "services": { "name": "Services", "link": "./#services" },
+      "gallery": { "name": "Gallery", "link": "./#gallery" },
+      "contacts": { "name": "Contacts", "link": "./#contacts" }
+    },
+    "open": "Open mobile menu",
+    "close": "Close mobile menu",
+    "choose": "Choose language"
+  },
+  "HeroSection": {
+    "motto": "Choose the best",
+    "cta": "Online booking"
+  }
+}

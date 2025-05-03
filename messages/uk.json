@@ -1,0 +1,17 @@
+{
+  "Header": {
+    "navigation": {
+      "barbers": { "name": "Майстри", "link": "./#barbers" },
+      "services": { "name": "Послуги", "link": "./#services" },
+      "gallery": { "name": "Галерея", "link": "./#gallery" },
+      "contacts": { "name": "Контакти", "link": "./#contacts" }
+    },
+    "open": "Відкрити мобільне меню",
+    "close": "Close mobile menu",
+    "choose": "Choose language"
+  },
+  "HeroSection": {
+    "motto": "Обирай найкращих",
+    "cta": "Онлайн запис"
+  }
+}

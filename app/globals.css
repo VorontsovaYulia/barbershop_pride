@@ -1,27 +1,42 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --font-openSans: 'Open Sans', sans-serif;
   --font-archivo-black: 'Archivo Black';
   --color-black: #081319;
   --color-white: #ffffff;
-  --color-hover: #D79574;
-  --color-main: #EACCB6;
+  --color-hover: #d79574;
+  --color-main: #eaccb6;
 
   --breakpoint-xs: 375px;
   --breakpoint-xl: 1440px;
 }
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   a,
   svg,
+  select,
   button {
-    @apply cursor-pointer transition-colors duration-300 ease-in-out;
+    @apply cursor-pointer transition-colors duration-300 ease-in-out outline-none;
   }
 }
 
+@utility group-hover-fill {
+  @apply group-hover:fill-hover group-focus:fill-hover group-active:fill-white;
+}
 
+@utility hover-text {
+  @apply hover:text-hover focus:text-hover active:text-white;
+}
 
+@utility hover-border {
+  @apply hover:border-hover focus:border-hover active:border-white;
+}
 
-
-
+@utility hover-bg {
+  @apply hover:bg-hover focus:bg-hover;
+}
