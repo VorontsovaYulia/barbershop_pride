@@ -8,7 +8,7 @@ import { Prices } from '../components/Prices';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Hero />
       <Advantages />
       <Barbers />
@@ -16,6 +16,6 @@ export default function Home() {
       <Gallery />
       <Certificate />
       <Contacts />
-    </div>
+    </>
   );
 }
