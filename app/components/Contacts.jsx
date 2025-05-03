@@ -2,7 +2,7 @@ import { LuClock5, LuPhone, LuMapPin } from 'react-icons/lu';
 
 export const Contacts = () => {
   return (
-    <section className="xl:flex">
+    <section id="contacts" className="xl:flex">
       <div className="px-6 pt-10 pb-12 xl:px-18 xl:pt-20">
         <h2 className="text-center text-[22px]/[30px] italic xl:text-start xl:text-[36px]/[42px]">
           НАШІ КОНТАКТИ
