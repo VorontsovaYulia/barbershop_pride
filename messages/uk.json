@@ -7,8 +7,8 @@
       "contacts": { "name": "Контакти", "anchor": "contacts" }
     },
     "open": "Відкрити мобільне меню",
-    "close": "Close mobile menu",
-    "choose": "Choose language"
+    "close": "Закрити мобільне меню",
+    "choose": "Вибрати мову"
   },
   "HeroSection": {
     "motto": "Обирай найкращих",
