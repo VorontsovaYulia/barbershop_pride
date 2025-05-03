@@ -13,5 +13,16 @@
   "HeroSection": {
     "motto": "Choose the best",
     "cta": "Online booking"
+  },
+  "CertificateSection": {
+"title": "Gift Certificates from",
+"cta": "Gift choice"
+  },
+  "ContactsSection": {
+    "title": "Our contacts",
+    "RCaddress": "RC 'Nyvky Park'",
+"address": "Beresteiskyi Avenue 67a, Kyiv",
+"time": "Working hours",
+"button": "Online booking"
   }
 }
