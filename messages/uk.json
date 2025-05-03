@@ -1,10 +1,10 @@
 {
   "Header": {
     "navigation": {
-      "barbers": { "name": "Майстри", "link": "./#barbers" },
-      "services": { "name": "Послуги", "link": "./#services" },
-      "gallery": { "name": "Галерея", "link": "./#gallery" },
-      "contacts": { "name": "Контакти", "link": "./#contacts" }
+      "barbers": { "name": "Майстри", "anchor": "barbers" },
+      "services": { "name": "Послуги", "anchor": "services" },
+      "gallery": { "name": "Галерея", "anchor": "gallery" },
+      "contacts": { "name": "Контакти", "anchor": "contacts" }
     },
     "open": "Відкрити мобільне меню",
     "close": "Close mobile menu",

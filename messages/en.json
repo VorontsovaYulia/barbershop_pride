@@ -1,10 +1,10 @@
 {
   "Header": {
     "navigation": {
-      "barbers": { "name": "Barbers", "link": "./#barbers" },
-      "services": { "name": "Services", "link": "./#services" },
-      "gallery": { "name": "Gallery", "link": "./#gallery" },
-      "contacts": { "name": "Contacts", "link": "./#contacts" }
+      "barbers": { "name": "Barbers", "anchor": "barbers" },
+      "services": { "name": "Services", "anchor": "services" },
+      "gallery": { "name": "Gallery", "anchor": "gallery" },
+      "contacts": { "name": "Contacts", "anchor": "contacts" }
     },
     "open": "Open mobile menu",
     "close": "Close mobile menu",
