@@ -4,12 +4,13 @@ import { useEffect } from 'react';
 import { IoClose } from 'react-icons/io5';
 import { IoLogoInstagram } from 'react-icons/io5';
 import Link from 'next/link';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { keys } from '@/app/lib/navLinks';
 
 export const MobMenu = ({ animation, onClose }) => {
   const t = useTranslations('Header.navigation');
   const c = useTranslations('Header');
+  const locale = useLocale();
 
   useEffect(() => {
     const handleKeyDown = event => {
@@ -51,7 +52,7 @@ export const MobMenu = ({ animation, onClose }) => {
         {keys.map(key => (
           <Link
             key={key}
-            href={t(`${key}.link`)}
+            href={`/${locale}/#${t(`${key}.anchor`)}`}
             scroll={true}
             className="hover-text"
             onClick={onClose}
