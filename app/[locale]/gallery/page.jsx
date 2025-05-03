@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { galleryItemsMobile, galleryItemsDesktop } from '../../lib/data';
 
@@ -5,10 +6,12 @@ export const metadata = {
   title: "Галерея | Барбершоп Pride",
 };
 
-export default function Gallery() {
+export default async function Gallery() {
+  const t = await getTranslations('GalleryPage');
+
   return (
     <div className="px-6 pt-6 pb-4 xl:pt-10 xl:pb-21 xl:px-18">
-      <h1 className="text-center italic text-[22px]/[30px] xl:text-[36px]/[42px] mb-6 xl:mb-14">ГАЛЕРЕЯ</h1>
+      <h1 className="text-center uppercase italic text-[22px]/[30px] xl:text-[36px]/[42px] mb-6 xl:mb-14">{t('gallery')}</h1>
 
       {/* Mobile */}
       <ul className="flex xl:hidden flex-wrap gap-4 justify-center">
@@ -18,7 +21,7 @@ export default function Gallery() {
               <li key={index}>
                 <Image
                   src={item.src}
-                  alt={`Фото ${index + 1}`}
+                  alt={`${t('alt')} ${index + 1}`}
                   width={328}
                   height={460}
                   priority
@@ -30,8 +33,8 @@ export default function Gallery() {
           if (item.type === 'text') {
             return (
               <li key={index} className="flex flex-col justify-center py-12 ">
-                <h3 className="italic text-[16px] mb-4">{item.title}</h3>
-                <p className="text-sm">{item.description}</p>
+                <h3 className="italic uppercase text-[16px] mb-4">{t(item.titleKey)}</h3>
+                <p className="text-sm">{t(item.descriptionKey)}</p>
               </li>
             );
           }
@@ -48,7 +51,7 @@ export default function Gallery() {
               <li key={index}>
                 <Image
                   src={item.src}
-                  alt={`Фото ${index + 1}`}
+                  alt={`${t('alt')} ${index + 1}`}
                   width={300}
                   height={380}
                   className="object-cover hover:scale-105 duration-500 transition-transform"
@@ -61,8 +64,8 @@ export default function Gallery() {
           if (item.type === 'text') {
             return (
               <li key={index} className="flex flex-col justify-center w-[300px] h-[380px]">
-                <h2 className="italic text-[16px] mb-4">{item.title}</h2>
-                <p className="text-[16px]">{item.description}</p>
+                <h2 className="italic uppercase text-[16px] mb-4">{t(item.titleKey)}</h2>
+                <p className="text-[16px]">{t(item.descriptionKey)}</p>
               </li>
             );
           }
