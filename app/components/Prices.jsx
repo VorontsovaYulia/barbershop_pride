@@ -74,14 +74,17 @@ const servicesAndPrices = [
 ];
 export const Prices = () => {
   return (
-    <section className="bg-[url(/images/prices-background-mob.webp)] bg-cover bg-center bg-no-repeat px-4 py-4 xl:px-18 xl:pt-20 xl:pb-10">
-      <div class="rounded-[10px] backdrop-blur-lg backdrop-grayscale-50">
-        <h2 className="mb-4 pt-4 text-center text-[22px]/[30px] text-white uppercase italic xl:mb-16 xl:text-[36px]/[42px]">
+    <section className="bg-[url(/images/prices-background-mob.webp)] bg-cover bg-center bg-no-repeat px-4 py-4 xl:bg-[url(/images/prices-background-desk.webp)] xl:px-18 xl:py-16">
+      <div className="rounded-[10px] bg-[linear-gradient(90.00deg,rgba(192,188,188,0.1)0%,rgba(252,246,246,0.1)53.251%,rgba(153,153,153,0.1)100%)] shadow-[inset_0_0_68px_0_rgba(221,216,216,0.05)] backdrop-blur-[12px]">
+        <h2 className="mb-3 pt-4 text-center text-[22px]/[30px] text-white uppercase italic xl:mb-10 xl:px-18 xl:text-start xl:text-[36px]/[42px]">
           Послуги
         </h2>
-        <ul className="flex flex-col gap-y-2 justify-center px-4 text-white text-[14px]/[20px]">
+        <ul className="flex flex-col justify-center gap-y-2 px-4 pb-3 text-[14px]/[20px] text-white xl:px-18">
           {servicesAndPrices.map((item, idx) => (
-            <li key={idx} className="flex flex-row justify-between border-b pb-1">
+            <li
+              key={idx}
+              className="flex flex-row justify-between border-b-[0.5px] pb-1"
+            >
               <p>{item.service}</p>
               <p>
                 {item.price}

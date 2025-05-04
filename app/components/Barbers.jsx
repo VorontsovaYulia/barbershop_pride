@@ -115,7 +115,7 @@ export const Barbers = () => {
                 </p>
                 <Link href="/">
                   <Image
-                    className="h-20 xl:w-22"
+                    className="xl:h-12 xl:w-12"
                     src={item.icon}
                     alt="Аltegio"
                     unoptimized={true}
