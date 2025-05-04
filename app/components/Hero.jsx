@@ -1,10 +1,27 @@
 import { getTranslations } from 'next-intl/server';
 import { IoLogoInstagram } from 'react-icons/io5';
+import Image from 'next/image';
 
 export const Hero = async () => {
   const t = await getTranslations('HeroSection');
   return (
-    <section className="relative mt-[-80px] max-h-[790px] max-w-[375px] bg-[url('/images/hero_mob.webp')] bg-cover bg-center pt-[80px] pb-[168px] xl:mt-[-104px] xl:max-h-[920px] xl:max-w-[1440px] xl:bg-[url('/images/hero.webp')] xl:pt-[104px] xl:pb-[142px]">
+    <section className="relative mt-[-80px] max-h-[790px] max-w-[375px] pt-[80px] pb-[168px] xl:mt-[-104px] xl:max-h-[920px] xl:max-w-[1440px] xl:pt-[104px] xl:pb-[142px]">
+      <Image
+        src="/images/hero_mob.jpg"
+        alt="Hero Background"
+        fill
+        priority
+        className="object-cover xl:hidden"
+        sizes="(max-width: 768px) 100vw"
+      />
+      <Image
+        src="/images/hero.jpg"
+        alt="Hero Background"
+        fill
+        priority
+        className="hidden object-cover xl:block"
+        sizes="(min-width: 1280px) 100vw"
+      />
       <div className="absolute top-[464px] right-[72px] inline-flex origin-top-right rotate-90 items-center justify-end gap-4 max-xl:hidden">
         <span className="text-[18px]/[26px]">SOCIAL</span>
         <div className="w-[200px] border-b"></div>
@@ -13,14 +30,15 @@ export const Hero = async () => {
           target="_blank"
           rel="noopener noreferrer nofollow"
           className="group"
+          aria-label="instagram"
         >
           <IoLogoInstagram className="group-hover-fill h-6 w-6" />
         </a>
       </div>
-      <h1 className="font-archivo-black mx-auto mt-60 max-w-[750px] text-center text-[38px]/[46px] xl:mt-[174px] xl:text-[96px]/[124px]">
+      <h1 className="font-archivo-black relative z-10 mx-auto mt-60 max-w-[750px] text-center text-[38px]/[46px] xl:mt-[174px] xl:text-[96px]/[124px]">
         PRIDE BARBERSHOP
       </h1>
-      <p className="mt-8 text-center text-[22px]/[30px] xl:mt-6 xl:text-[36px]/[44px]">
+      <p className="relative z-10 mt-8 text-center text-[22px]/[30px] xl:mt-6 xl:text-[36px]/[44px]">
         {t('motto')}
       </p>
       <a

@@ -33,19 +33,19 @@ export const LanguageSwitcher = () => {
           position="popper"
           side="bottom"
           align="end"
-          sideOffset={4}
+          sideOffset={2}
           className="bg-main text-xl text-black"
         >
           <Select.Viewport>
             <Select.Item
               value="en"
-              className="hover-bg cursor-pointer px-3 py-1 outline-none"
+              className="hover-bg cursor-pointer px-3 outline-none"
             >
               <Select.ItemText>EN</Select.ItemText>
             </Select.Item>
             <Select.Item
               value="uk"
-              className="hover-bg cursor-pointer px-3 py-1 outline-none"
+              className="hover-bg cursor-pointer px-3 outline-none"
             >
               <Select.ItemText>UA</Select.ItemText>
             </Select.Item>
