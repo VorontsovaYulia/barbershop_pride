@@ -63,7 +63,7 @@ export const Barbers = () => {
             >
               <Link
                 href="/"
-                className="flex h-88 w-78 justify-end xl:h-108 xl:w-92"
+                className="pointer-events-none flex h-88 w-78 justify-end xl:h-108 xl:w-92"
               >
                 {/* Рамка */}
                 <span className="mr-4 h-78 w-60 border-1 xl:mr-1 xl:h-95 xl:w-73"></span>
@@ -88,7 +88,7 @@ export const Barbers = () => {
                   src={item.image_hover_mob}
                   width={264}
                   height={324}
-                  className="hidden absolute top-6 right-12 group-hover:block xl:hidden"
+                  className="absolute top-6 right-12 hidden group-hover:block xl:hidden xl:group-hover:hidden"
                   alt={item.description_for_img}
                 />
 
@@ -97,7 +97,7 @@ export const Barbers = () => {
                   src={item.image_desk}
                   width={320}
                   height={400}
-                  className="hidden xl:absolute xl:top-8 xl:right-10 xl:block xl:transition-opacity xl:duration-500 xl:ease-in-out xl:group-hover:hidden"
+                  className="hidden xl:absolute xl:top-8 xl:right-10 xl:block  xl:group-hover:hidden"
                   alt={item.description_for_img}
                 />
                 <Image
