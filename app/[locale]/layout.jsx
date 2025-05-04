@@ -47,14 +47,6 @@ export default async function RootLayout({ children, params }) {
           imagesizes="100vw"
           type="image/webp"
         />
-        <link
-          rel="preload"
-          as="image"
-          href="/images/hero.webp"
-          imagesrcset="/images/hero.webp"
-          imagesizes="100vw"
-          type="image/webp"
-        />
       </head>
       <body
         className={`${openSans.variable} ${archivoBlack.variable} text-main font-openSans bg-black text-sm font-normal antialiased xl:text-xl`}
