@@ -13,7 +13,7 @@ export const Hero = async () => {
         alt="Hero Background"
         fill
         priority
-        quality={70}
+        quality={65}
         className="block object-cover xl:hidden"
         sizes="(max-width: 1440px) 100vw"
       />
@@ -21,7 +21,6 @@ export const Hero = async () => {
         src={HeroImg}
         alt="Hero Background"
         fill
-        quality={70}
         className="hidden object-cover xl:block"
         sizes="(min-width: 1440px) 100vw"
       />
