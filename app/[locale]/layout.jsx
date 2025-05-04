@@ -1,7 +1,7 @@
 import { Open_Sans, Archivo_Black } from 'next/font/google';
 import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Navigation } from '../components/ui/Navigation';
@@ -22,11 +22,15 @@ export const archivoBlack = Archivo_Black({
   display: 'swap',
 });
 
-export const metadata = {
-  title: 'Барбершоп Pride | Барбершоп Нивки',
-  description:
-    'Чоловіча перукарня у Києві на Нивках. Барбершоп Pride пропонує стильні стрижки, гоління небезпечною бритвою та догляд за бородою. Ми поряд із метро Нивки. ЖК Нивки Парк',
-};
+export async function generateMetadata({ params }) {
+  const { locale } = await params; 
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
 
 export default async function RootLayout({ children, params }) {
   const { locale } = await params;
