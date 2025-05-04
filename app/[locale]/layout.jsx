@@ -5,6 +5,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Navigation } from '../components/ui/Navigation';
+import Head from 'next/head';
 
 export const openSans = Open_Sans({
   subsets: ['latin'],
@@ -38,16 +39,14 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang={locale}>
-      <head>
+      <Head>
         <link
           rel="preload"
           as="image"
           href="/images/hero_mob.webp"
-          imagesrcset="/images/hero_mob.webp"
-          imagesizes="100vw"
           type="image/webp"
         />
-      </head>
+      </Head>
       <body
         className={`${openSans.variable} ${archivoBlack.variable} text-main font-openSans bg-black text-sm font-normal antialiased xl:text-xl`}
       >
