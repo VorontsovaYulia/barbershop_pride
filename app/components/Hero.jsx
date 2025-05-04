@@ -13,7 +13,6 @@ export const Hero = async () => {
         alt="Hero Background"
         fill
         priority
-        quality={65}
         className="block object-cover xl:hidden"
         sizes="(max-width: 1440px) 100vw"
       />
