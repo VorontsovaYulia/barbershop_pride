@@ -10,17 +10,17 @@ export const Hero = async () => {
         src="/images/hero_mob.jpg"
         alt="Hero Background"
         fill
-        priority
+        // priority
         className="object-cover xl:hidden"
-        sizes="(max-width: 768px) 100vw"
+        sizes="(max-width: 1440px) 100vw"
       />
       <Image
         src="/images/hero.jpg"
         alt="Hero Background"
         fill
-        priority
+        // priority
         className="hidden object-cover xl:block"
-        sizes="(min-width: 1280px) 100vw"
+        sizes="(min-width: 1440px) 100vw"
       />
       <div className="absolute top-[464px] right-[72px] inline-flex origin-top-right rotate-90 items-center justify-end gap-4 max-xl:hidden">
         <span className="text-[18px]/[26px]">SOCIAL</span>
