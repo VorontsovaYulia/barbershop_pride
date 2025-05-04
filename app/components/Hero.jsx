@@ -5,7 +5,7 @@ import Image from 'next/image';
 export const Hero = async () => {
   const t = await getTranslations('HeroSection');
   return (
-    <section className="relative mt-[-80px] max-h-[790px] max-w-[375px] pt-[80px] pb-[168px] xl:mt-[-104px] xl:max-h-[920px] xl:max-w-[1440px] xl:pt-[104px] xl:pb-[142px]">
+    <section className="relative mt-[-80px] h-[790px] max-w-[375px] pt-[80px] pb-[168px] xl:mt-[-104px] xl:h-[920px] xl:max-w-[1440px] xl:pt-[104px] xl:pb-[142px]">
       <Image
         src="/images/hero_mob.webp"
         alt="Hero Background"
