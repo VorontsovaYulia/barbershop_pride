@@ -23,7 +23,7 @@ export const archivoBlack = Archivo_Black({
 });
 
 export async function generateMetadata({ params }) {
-  const { locale } = await params; 
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
@@ -38,6 +38,24 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang={locale}>
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero_mob.webp"
+          imagesrcset="/images/hero_mob.webp"
+          imagesizes="100vw"
+          type="image/webp"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero.webp"
+          imagesrcset="/images/hero.webp"
+          imagesizes="100vw"
+          type="image/webp"
+        />
+      </head>
       <body
         className={`${openSans.variable} ${archivoBlack.variable} text-main font-openSans bg-black text-sm font-normal antialiased xl:text-xl`}
       >
