@@ -1,0 +1,51 @@
+{
+  "Header": {
+    "navigation": {
+      "barbers": { "name": "Barbers", "anchor": "barbers" },
+      "services": { "name": "Services", "anchor": "services" },
+      "gallery": { "name": "Gallery", "anchor": "gallery" },
+      "contacts": { "name": "Contacts", "anchor": "contacts" }
+    },
+    "open": "Open mobile menu",
+    "close": "Close mobile menu",
+    "choose": "Choose language"
+  },
+  "HeroSection": {
+    "motto": "Choose the best",
+    "cta": "Online booking"
+  },
+  "GallerySection": {
+    "gallery": "gallery",
+    "more": "more",
+    "left": "back arrow",
+    "right": "forward arrow",
+    "alt": "Slide"
+  },
+  "CertificateSection": {
+    "title": "Gift Certificates from",
+    "cta": "Gift choice"
+  },
+  "ContactsSection": {
+    "title": "Our contacts",
+    "RCaddress": "RC 'Nyvky Park'",
+    "address": "Beresteiskyi Avenue 67a, Kyiv",
+    "time": "Working hours",
+    "button": "Online booking"
+  },
+  "GalleryPage": {
+    "gallery": "gallery",
+    "title_1": "royal facial treatment",
+    "description_1": "The cosmetic SPA procedure includes facial steaming, deep cleansing with a scrub, mechanical cleaning, and a soothing PREMIUM mask. The result is clean, fresh, and well-groomed skin without blackheads.",
+    "title_2": "relaxing head massage",
+    "description_2": "The perfect finish to a haircut or simply a reason to pause and reset. It relieves stress, recharges energy, and offers true relaxation.",
+    "title_3": "gray hair camouflage by аmerican сrew",
+    "description_3": "Light and natural gray hair masking that gives hair a rich and natural color. A stylish look without drastic changes — in just 15 minutes.",
+    "title_4": "wax depilation",
+    "description_4": "Fast and effective removal of unwanted hair. One session — and your skin is clean, smooth, and irritation-free for weeks.",
+    "alt": "Photo"
+  },
+  "Metadata": {
+    "title": "Barbershop Pride | Barbershop Nyvky",
+    "description": "Men's barbershop in Kyiv, located in Nyvky Park residential complex. Pride offers stylish haircuts, straight razor shaves, and beard grooming. We're next to Nyvky metro."
+  }
+}
