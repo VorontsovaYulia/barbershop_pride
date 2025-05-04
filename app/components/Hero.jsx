@@ -7,18 +7,16 @@ export const Hero = async () => {
   return (
     <section className="relative mt-[-80px] max-h-[790px] max-w-[375px] pt-[80px] pb-[168px] xl:mt-[-104px] xl:max-h-[920px] xl:max-w-[1440px] xl:pt-[104px] xl:pb-[142px]">
       <Image
-        src="/images/hero_mob.jpg"
+        src="/images/hero_mob.webp"
         alt="Hero Background"
         fill
-        // priority
-        className="object-cover xl:hidden"
+        className="block object-cover xl:hidden"
         sizes="(max-width: 1440px) 100vw"
       />
       <Image
-        src="/images/hero.jpg"
+        src="/images/hero.webp"
         alt="Hero Background"
         fill
-        // priority
         className="hidden object-cover xl:block"
         sizes="(min-width: 1440px) 100vw"
       />
