@@ -1,5 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { IoLogoInstagram } from 'react-icons/io5';
+import HeroMobImg from '@images/hero_mob.webp';
+import HeroImg from '@images/hero.webp';
 import Image from 'next/image';
 
 export const Hero = async () => {
@@ -7,14 +9,15 @@ export const Hero = async () => {
   return (
     <section className="relative mt-[-80px] max-h-[790px] max-w-[375px] pt-[80px] pb-[168px] xl:mt-[-104px] xl:max-h-[920px] xl:max-w-[1440px] xl:pt-[104px] xl:pb-[142px]">
       <Image
-        src="/images/hero_mob.webp"
+        src={HeroMobImg}
         alt="Hero Background"
         fill
+        priority
         className="block object-cover xl:hidden"
         sizes="(max-width: 1440px) 100vw"
       />
       <Image
-        src="/images/hero.webp"
+        src={HeroImg}
         alt="Hero Background"
         fill
         className="hidden object-cover xl:block"
