@@ -14,6 +14,26 @@
     "motto": "Обирай найкращих",
     "cta": "Онлайн запис"
   },
+  "Advantages": {
+    "title": "Чому обирають нас",
+    "advantage": [
+      {
+        "icon": "icons/advantages-1.svg",
+        "text": "Кожна стрижка - діалог",
+        "description": "Картинка ножиці"
+      },
+      {
+        "icon": "icons/advantages-2.svg",
+        "text": "Кожна зустріч - ритуал",
+        "description": "Картинка леза"
+      },
+      {
+        "icon": "icons/advantages-3.svg",
+        "text": "Кожен клієнт - історія",
+        "description": "Картинка чоловік"
+      }
+    ]
+  },
   "GallerySection": {
     "gallery": "галерея",
     "more": "більше",

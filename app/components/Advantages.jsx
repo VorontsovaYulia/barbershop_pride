@@ -1,32 +1,18 @@
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
-const advantagesItems = [
-  {
-    icon: 'icons/advantages-1.svg',
-    text: 'Кожна стрижка - діалог',
-    description: 'Картинка ножиці',
-  },
-  {
-    icon: 'icons/advantages-2.svg',
-    text: 'Кожна зустріч - ритуал',
-    description: 'Картинка леза',
-  },
-  {
-    icon: 'icons/advantages-3.svg',
-    text: 'Кожен клієнт - історія',
-    description: 'Картинка чоловік',
-  },
-];
 
-export const Advantages = () => {
+export const Advantages = async () => {
+  const t = await getTranslations('Advantages');
+console.log(t.raw('advantage'));
   return (
     <section className="px-4 pt-12 pb-8 xl:px-18 xl:pt-20 xl:pb-10">
       <h2 className="mb-10 text-center text-[22px]/[30px] uppercase italic xl:mb-16 xl:text-[36px]/[42px]">
-        Чому обирають нас
+       {t('title')}
       </h2>
       <div className="flex items-center justify-center">
-        <ul className="flex w-40 flex-col gap-y-10 xl:w-212 xl:flex-row xl:justify-between">
-          {advantagesItems.map((item, idx) => (
+        <ul className="flex  max-w-60 flex-col gap-y-10 xl:min-w-212 xl:flex-row xl:justify-between">
+          {t.raw('advantage').map((item, idx) => (
             <li
               key={idx}
               className="flex flex-col items-center gap-y-4 xl:gap-y-6"

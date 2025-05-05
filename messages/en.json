@@ -14,6 +14,27 @@
     "motto": "Choose the best",
     "cta": "Online booking"
   },
+  "Advantages":{
+    "title": "Why choose us",
+    "advantage":
+   [
+    {
+      "icon": "icons/advantages-1.svg",
+      "text": "Every cut is a conversation",
+      "description": "Scissors image"
+    },
+    {
+      "icon": "icons/advantages-2.svg",
+      "text": "Each encounter is a ritual",
+      "description": "Blade image"
+    },
+    {
+      "icon": "icons/advantages-3.svg",
+      "text": "Every client is a story",
+      "description": "Man image"
+    }
+  ]
+},
   "GallerySection": {
     "gallery": "gallery",
     "more": "more",
