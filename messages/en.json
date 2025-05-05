@@ -83,6 +83,84 @@
       }
     ]
   },
+  "ServicesAndPrices": {
+    "title": "Services",
+    "currency": "UAH ",
+    "servicesAndPrices": [
+      {
+        "service": "Haircut",
+        "price": "700"
+      },
+      {
+        "service": "Beard",
+        "price": "500 "
+      },
+      {
+        "service": "Combo (Haircut + Beard)",
+        "price": "  1100"
+      },
+      {
+        "service": "Clipper haircut",
+        "price": "500"
+      },
+      {
+        "service": "Kids' haircut",
+        "price": "650"
+      },
+      {
+        "service": "Long haircut",
+        "price": "850"
+      },
+      {
+        "service": "Medium-length haircut",
+        "price": "800"
+      },
+      {
+        "service": "Gray hair camouflage (head)",
+        "price": "  650"
+      },
+      {
+        "service": "Gray hair camouflage (beard)",
+        "price": "600"
+      },
+      {
+        "service": "Hair styling",
+        "price": "200"
+      },
+      {
+        "service": "Mustache",
+        "price": "200"
+      },
+      {
+        "service": "Perfect eyebrows",
+        "price": "250"
+      },
+      {
+        "service": "Waxing",
+        "price": "200"
+      },
+      {
+        "service": "Royal head shaving",
+        "price": " 650"
+      },
+      {
+        "service": "Royal beard shaving",
+        "price": " 600"
+      },
+      {
+        "service": "Scalp peeling",
+        "price": "400"
+      },
+      {
+        "service": "Relaxing head massage",
+        "price": "250"
+      },
+      {
+        "service": "Royal facial treatment",
+        "price": "600"
+      }
+    ]
+  },
   "GallerySection": {
     "gallery": "gallery",
     "more": "more",
