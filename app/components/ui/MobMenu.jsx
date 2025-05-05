@@ -36,7 +36,7 @@ export const MobMenu = ({ animation, onClose }) => {
 
   return (
     <div
-      className={`fixed top-0 z-10 flex h-full w-full max-w-[375px] transform flex-col items-center gap-16 bg-black transition-transform duration-500 ease-in-out ${
+      className={`fixed top-0 z-20 flex h-full w-full max-w-[375px] transform flex-col items-center gap-16 bg-black transition-transform duration-500 ease-in-out ${
         animation ? 'translate-x-0' : 'translate-x-full'
       }`}
     >

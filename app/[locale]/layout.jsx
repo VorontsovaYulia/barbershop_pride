@@ -5,6 +5,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Navigation } from '../components/ui/Navigation';
+import Head from 'next/head';
 
 export const openSans = Open_Sans({
   subsets: ['latin'],
@@ -23,7 +24,7 @@ export const archivoBlack = Archivo_Black({
 });
 
 export async function generateMetadata({ params }) {
-  const { locale } = await params; 
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
@@ -38,6 +39,14 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang={locale}>
+      <Head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero_mob.webp"
+          type="image/webp"
+        />
+      </Head>
       <body
         className={`${openSans.variable} ${archivoBlack.variable} text-main font-openSans bg-black text-sm font-normal antialiased xl:text-xl`}
       >
