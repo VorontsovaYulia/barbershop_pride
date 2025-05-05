@@ -9,7 +9,7 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import {slidesMobile, slidesDesktop} from '../lib/data'
+import {slidesMobile, slidesDesktop} from '../lib/gallery'
 
 export const Gallery = () => {
     const [isMobile, setIsMobile] = useState(false);

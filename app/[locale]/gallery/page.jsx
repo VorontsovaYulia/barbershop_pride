@@ -1,11 +1,16 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-import { galleryItemsMobile, galleryItemsDesktop } from '../../lib/data';
+import { galleryItemsMobile, galleryItemsDesktop } from '../../lib/gallery';
 
-export const metadata = {
-  title: "Галерея | Барбершоп Pride",
-};
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
 
+  return {
+    title: t('galleryTitle'),
+    description: t('galleryDescription'),
+  };
+}
 export default async function Gallery() {
   const t = await getTranslations('GalleryPage');
 
