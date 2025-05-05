@@ -14,27 +14,75 @@
     "motto": "Choose the best",
     "cta": "Online booking"
   },
-  "Advantages":{
+  "Advantages": {
     "title": "Why choose us",
-    "advantage":
-   [
-    {
-      "icon": "icons/advantages-1.svg",
-      "text": "Every cut is a conversation",
-      "description": "Scissors image"
-    },
-    {
-      "icon": "icons/advantages-2.svg",
-      "text": "Each encounter is a ritual",
-      "description": "Blade image"
-    },
-    {
-      "icon": "icons/advantages-3.svg",
-      "text": "Every client is a story",
-      "description": "Man image"
-    }
-  ]
-},
+    "advantages": [
+      {
+        "icon": "icons/advantages-1.svg",
+        "text": "Every cut is a conversation",
+        "description": "Scissors image"
+      },
+      {
+        "icon": "icons/advantages-2.svg",
+        "text": "Each encounter is a ritual",
+        "description": "Blade image"
+      },
+      {
+        "icon": "icons/advantages-3.svg",
+        "text": "Every client is a story",
+        "description": "Man image"
+      }
+    ]
+  },
+  "Barbers": {
+    "title": "Barbers",
+    "barbers": [
+      {
+        "image_mob": "/images/barbers-Bohdan-mob.jpg",
+        "image_desk": "/images/barbers-Bohdan-desk.jpg",
+        "name": "Bogdan",
+        "image_hover_mob": "/images/barbers-Bohdan-mob-hover.jpg",
+        "image_hover_desk": "/images/barbers-Bohdan-desk-hover.jpg",
+        "text_hover": "From classics to trends",
+        "description_for_img": "Photo of Master Bogdan",
+        "icon": "icons/barbers-altegio.svg",
+        "link": ""
+      },
+      {
+        "image_mob": "/images/barbers-Kate-mob.jpg",
+        "image_desk": "/images/barbers-Kate-desk.jpg",
+        "name": "Katerina",
+        "image_hover_mob": "/images/barbers-Kate-mob-hover.jpg",
+        "image_hover_desk": "/images/barbers-Kate-desk-hover.jpg",
+        "text_hover": "Your new style is already in her head",
+        "description_for_img": "Photo of Master Katerina",
+        "icon": "icons/barbers-altegio.svg",
+        "link": ""
+      },
+      {
+        "image_mob": "/images/barbers-Dima-mob.jpg",
+        "image_desk": "/images/barbers-Dima-desk.jpg",
+        "name": "Dmytro",
+        "image_hover_mob": "/images/barbers-Dima-mob-hover.jpg",
+        "image_hover_desk": "/images/barbers-Dima-desk-hover.jpg",
+        "text_hover": "Precision in every move.",
+        "description_for_img": "Photo of Master Dmytro",
+        "icon": "icons/barbers-altegio.svg",
+        "link": ""
+      },
+      {
+        "image_mob": "/images/barbers-Darina-mob.jpg",
+        "image_desk": "/images/barbers-Darina-desk.jpg",
+        "name": "Daryna",
+        "image_hover_mob": "/images/barbers-Darina-mob-hover.jpg",
+        "image_hover_desk": "/images/barbers-Darina-desk.jpg",
+        "text_hover": "?????????????????????",
+        "description_for_img": "Photo of Master Daryna",
+        "icon": "icons/barbers-altegio.svg",
+        "link": ""
+      }
+    ]
+  },
   "GallerySection": {
     "gallery": "gallery",
     "more": "more",
