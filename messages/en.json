@@ -14,6 +14,153 @@
     "motto": "Choose the best",
     "cta": "Online booking"
   },
+  "Advantages": {
+    "title": "Why choose us",
+    "advantages": [
+      {
+        "icon": "icons/advantages-1.svg",
+        "text": "Every cut is a conversation",
+        "description": "Scissors image"
+      },
+      {
+        "icon": "icons/advantages-2.svg",
+        "text": "Each encounter is a ritual",
+        "description": "Blade image"
+      },
+      {
+        "icon": "icons/advantages-3.svg",
+        "text": "Every client is a story",
+        "description": "Man image"
+      }
+    ]
+  },
+  "Barbers": {
+    "title": "Barbers",
+    "barbers": [
+      {
+        "image_mob": "/images/barbers-Bohdan-mob.jpg",
+        "image_desk": "/images/barbers-Bohdan-desk.jpg",
+        "name": "Bogdan",
+        "image_hover_mob": "/images/barbers-Bohdan-mob-hover.jpg",
+        "image_hover_desk": "/images/barbers-Bohdan-desk-hover.jpg",
+        "text_hover": "From classics to trends",
+        "description_for_img": "Photo of Master Bogdan",
+        "icon": "icons/barbers-altegio.svg",
+        "link": ""
+      },
+      {
+        "image_mob": "/images/barbers-Kate-mob.jpg",
+        "image_desk": "/images/barbers-Kate-desk.jpg",
+        "name": "Katerina",
+        "image_hover_mob": "/images/barbers-Kate-mob-hover.jpg",
+        "image_hover_desk": "/images/barbers-Kate-desk-hover.jpg",
+        "text_hover": "Your new style is already in her head",
+        "description_for_img": "Photo of Master Katerina",
+        "icon": "icons/barbers-altegio.svg",
+        "link": ""
+      },
+      {
+        "image_mob": "/images/barbers-Dima-mob.jpg",
+        "image_desk": "/images/barbers-Dima-desk.jpg",
+        "name": "Dmytro",
+        "image_hover_mob": "/images/barbers-Dima-mob-hover.jpg",
+        "image_hover_desk": "/images/barbers-Dima-desk-hover.jpg",
+        "text_hover": "Precision in every move.",
+        "description_for_img": "Photo of Master Dmytro",
+        "icon": "icons/barbers-altegio.svg",
+        "link": ""
+      },
+      {
+        "image_mob": "/images/barbers-Darina-mob.jpg",
+        "image_desk": "/images/barbers-Darina-desk.jpg",
+        "name": "Daryna",
+        "image_hover_mob": "/images/barbers-Darina-mob-hover.jpg",
+        "image_hover_desk": "/images/barbers-Darina-desk.jpg",
+        "text_hover": "?????????????????????",
+        "description_for_img": "Photo of Master Daryna",
+        "icon": "icons/barbers-altegio.svg",
+        "link": ""
+      }
+    ]
+  },
+  "ServicesAndPrices": {
+    "title": "Services",
+    "currency": "UAH ",
+    "servicesAndPrices": [
+      {
+        "service": "Haircut",
+        "price": "700"
+      },
+      {
+        "service": "Beard",
+        "price": "500 "
+      },
+      {
+        "service": "Combo (Haircut + Beard)",
+        "price": "  1100"
+      },
+      {
+        "service": "Clipper haircut",
+        "price": "500"
+      },
+      {
+        "service": "Kids' haircut",
+        "price": "650"
+      },
+      {
+        "service": "Long haircut",
+        "price": "850"
+      },
+      {
+        "service": "Medium-length haircut",
+        "price": "800"
+      },
+      {
+        "service": "Gray hair camouflage (head)",
+        "price": "  650"
+      },
+      {
+        "service": "Gray hair camouflage (beard)",
+        "price": "600"
+      },
+      {
+        "service": "Hair styling",
+        "price": "200"
+      },
+      {
+        "service": "Mustache",
+        "price": "200"
+      },
+      {
+        "service": "Perfect eyebrows",
+        "price": "250"
+      },
+      {
+        "service": "Waxing",
+        "price": "200"
+      },
+      {
+        "service": "Royal head shaving",
+        "price": " 650"
+      },
+      {
+        "service": "Royal beard shaving",
+        "price": " 600"
+      },
+      {
+        "service": "Scalp peeling",
+        "price": "400"
+      },
+      {
+        "service": "Relaxing head massage",
+        "price": "250"
+      },
+      {
+        "service": "Royal facial treatment",
+        "price": "600"
+      }
+    ]
+  },
   "GallerySection": {
     "gallery": "gallery",
     "more": "more",

@@ -14,6 +14,153 @@
     "motto": "Обирай найкращих",
     "cta": "Онлайн запис"
   },
+  "Advantages": {
+    "title": "Чому обирають нас",
+    "advantages": [
+      {
+        "icon": "icons/advantages-1.svg",
+        "text": "Кожна стрижка - діалог",
+        "description": "Картинка ножиці"
+      },
+      {
+        "icon": "icons/advantages-2.svg",
+        "text": "Кожна зустріч - ритуал",
+        "description": "Картинка леза"
+      },
+      {
+        "icon": "icons/advantages-3.svg",
+        "text": "Кожен клієнт - історія",
+        "description": "Картинка чоловік"
+      }
+    ]
+  },
+  "Barbers": {
+    "title": "Наші майстри",
+    "barbers": [
+      {
+        "image_mob": "/images/barbers-Bohdan-mob.jpg",
+        "image_desk": "/images/barbers-Bohdan-desk.jpg",
+        "name": "Богдан",
+        "image_hover_mob": "/images/barbers-Bohdan-mob-hover.jpg",
+        "image_hover_desk": "/images/barbers-Bohdan-desk-hover.jpg",
+        "text_hover": "Від класики до трендів",
+        "description_for_img": "Фото майстра Богдана",
+        "icon": "icons/barbers-altegio.svg",
+        "link": ""
+      },
+      {
+        "image_mob": "/images/barbers-Kate-mob.jpg",
+        "image_desk": "/images/barbers-Kate-desk.jpg",
+        "name": "Катерина",
+        "image_hover_mob": "/images/barbers-Kate-mob-hover.jpg",
+        "image_hover_desk": "/images/barbers-Kate-desk-hover.jpg",
+        "text_hover": "Твій новий стиль уже в її голові",
+        "description_for_img": "Фото майстра Катерини",
+        "icon": "icons/barbers-altegio.svg",
+        "link": ""
+      },
+      {
+        "image_mob": "/images/barbers-Dima-mob.jpg",
+        "image_desk": "/images/barbers-Dima-desk.jpg",
+        "name": "Дмитро",
+        "image_hover_mob": "/images/barbers-Dima-mob-hover.jpg",
+        "image_hover_desk": "/images/barbers-Dima-desk-hover.jpg",
+        "text_hover": "Точність у кожному русі",
+        "description_for_img": "Фото майстра Дмитра",
+        "icon": "icons/barbers-altegio.svg",
+        "link": ""
+      },
+      {
+        "image_mob": "/images/barbers-Darina-mob.jpg",
+        "image_desk": "/images/barbers-Darina-desk.jpg",
+        "name": "Дарина",
+        "image_hover_mob": "/images/barbers-Darina-mob-hover.jpg",
+        "image_hover_desk": "/images/barbers-Darina-desk.jpg",
+        "text_hover": "?????????????????????",
+        "description_for_img": "Фото майстра Дарини",
+        "icon": "icons/barbers-altegio.svg",
+        "link": ""
+      }
+    ]
+  },
+  "ServicesAndPrices": {
+    "title": "Послуги",
+    "currency": "грн",
+    "servicesAndPrices": [
+      {
+        "service": "Стрижка",
+        "price": "700"
+      },
+      {
+        "service": "Борода",
+        "price": "500 "
+      },
+      {
+        "service": "Комбо (стрижка + борода)",
+        "price": "  1100"
+      },
+      {
+        "service": "Стрижка машинкою",
+        "price": "500"
+      },
+      {
+        "service": "Дитяча стрижка",
+        "price": "650"
+      },
+      {
+        "service": "Подовжена стрижка (довга)",
+        "price": "850"
+      },
+      {
+        "service": "Подовжена стрижка (середня) ",
+        "price": "800"
+      },
+      {
+        "service": "Камуфляж сивини (голова)",
+        "price": "  650"
+      },
+      {
+        "service": "Камуфляж сивини (борода)",
+        "price": "600"
+      },
+      {
+        "service": "Укладка",
+        "price": "200"
+      },
+      {
+        "service": "Вуса",
+        "price": "200"
+      },
+      {
+        "service": "Ідеальні брови",
+        "price": "250"
+      },
+      {
+        "service": "Воскова депіляція",
+        "price": "200"
+      },
+      {
+        "service": "Королівське гоління голови",
+        "price": " 650"
+      },
+      {
+        "service": "Королівське гоління бороди  ",
+        "price": " 600"
+      },
+      {
+        "service": "Пілінг шкіри голови",
+        "price": "400"
+      },
+      {
+        "service": "Розслабляючий масаж голови",
+        "price": "250"
+      },
+      {
+        "service": "Королівський догляд за обличчям",
+        "price": "600"
+      }
+    ]
+  },
   "GallerySection": {
     "gallery": "галерея",
     "more": "більше",
