@@ -40,7 +40,7 @@ const barbers = [
     image_desk: '/images/barbers-Darina-desk.jpg',
     name: 'Дарина',
     image_hover_mob: '/images/barbers-Darina-mob-hover.jpg',
-    image_hover_desk: '/images/barbers-Darina-desk-hover.jpg',
+    image_hover_desk: '/images/barbers-Darina-desk.jpg',
     text_hover: '?????????????????????',
     description_for_img: 'Фото майстра Дарини',
     icon: 'icons/barbers-altegio.svg',
@@ -59,7 +59,7 @@ export const Barbers = () => {
           {barbers.map((item, idx) => (
             <li
               key={idx}
-              className="group relative flex w-78 flex-col items-end gap-y-1 xl:w-92 xl:gap-y-4"
+              className="group relative flex w-78 flex-col items-end gap-y-1 xl:w-92 xl:gap-y-4 xl:nth-last-2:order-last"
             >
               <Link
                 href="/"
