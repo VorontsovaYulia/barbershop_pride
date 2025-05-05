@@ -33,11 +33,13 @@ export const Header = ({ children }) => {
     <header>
       <div className="relative z-10 items-center justify-between px-4 pt-8 max-xl:flex xl:px-18 xl:pt-6">
         <div className="flex items-center justify-between gap-8">
-          <Image
-            src={Logo}
-            alt="Barbershop logo"
-            className="h-12 w-12 xl:h-20 xl:w-20"
-          />
+          <a href="/">
+            <Image
+              src={Logo}
+              alt="Barbershop logo"
+              className="h-12 w-12 xl:h-20 xl:w-20"
+            />
+          </a>
           <div className="flex gap-12 max-xl:hidden">{children}</div>
           <LanguageSwitcher />
         </div>
