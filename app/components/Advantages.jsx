@@ -25,7 +25,7 @@ export const Advantages = () => {
         Чому обирають нас
       </h2>
       <div className="flex items-center justify-center">
-        <ul className="flex w-40 flex-col gap-y-10 xl:w-210 xl:flex-row xl:gap-x-22">
+        <ul className="flex w-40 flex-col gap-y-10 xl:w-212 xl:flex-row xl:justify-between">
           {advantagesItems.map((item, idx) => (
             <li
               key={idx}
