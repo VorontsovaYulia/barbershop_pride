@@ -48,19 +48,20 @@ export const MobMenu = ({ animation, onClose }) => {
         <IoClose className="group-hover-fill h-12 w-12" />
       </button>
 
-      <div className="mt-[136px] flex flex-col items-center gap-8 text-[24px]/[30px]">
+      <ul className="mt-[136px] flex flex-col items-center gap-8 text-[24px]/[30px]">
         {keys.map(key => (
-          <Link
-            key={key}
-            href={`/${locale}/#${t(`${key}.anchor`)}`}
-            scroll={true}
-            className="hover-text"
-            onClick={onClose}
-          >
-            {t(`${key}.name`)}
-          </Link>
+          <li key={key}>
+            <Link
+              href={`/${locale}/#${t(`${key}.anchor`)}`}
+              scroll={true}
+              className="hover-text"
+              onClick={onClose}
+            >
+              {t(`${key}.name`)}
+            </Link>
+          </li>
         ))}
-      </div>
+      </ul>
 
       <div className="inline-flex items-center justify-end gap-4">
         <span className="text-[16px]/[24px]">SOCIAL</span>

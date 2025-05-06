@@ -40,7 +40,7 @@ export const Header = ({ children }) => {
               className="h-12 w-12 xl:h-20 xl:w-20"
             />
           </a>
-          <div className="flex gap-12 max-xl:hidden">{children}</div>
+          <ul className="flex gap-12 max-xl:hidden">{children}</ul>
           <LanguageSwitcher />
         </div>
         <button
