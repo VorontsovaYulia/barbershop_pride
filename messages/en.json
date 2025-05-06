@@ -176,7 +176,8 @@
     "title": "Our contacts",
     "RCaddress": "RC 'Nyvky Park'",
     "address": "Beresteiskyi Avenue 67a, Kyiv",
-    "time": "Working hours",
+    "time": "Working hours: 10:00 - 20:00",
+    "mapTitle": "Google Maps location",
     "button": "Online booking"
   },
   "GalleryPage": {
