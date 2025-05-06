@@ -2,15 +2,17 @@ import Image from 'next/image';
 import Logo from '@images/logo.png';
 import { FaRegCopyright, FaInstagram } from 'react-icons/fa6';
 import { Navigation } from './ui/Navigation';
+import { getTranslations } from 'next-intl/server';
 
-export const Footer = () => {
+export const Footer = async () => {
+  const t = await getTranslations('Logo');
   return (
     <footer className="relative flex flex-col justify-center px-4 pt-8 pb-4 xl:px-18 xl:pt-10 xl:pb-6">
       <div className="mb-16 flex flex-wrap items-center justify-center xl:mb-[18px] xl:justify-between">
-        <a href="/">
+        <a href="/" aria-label={t('ariaLabel')}>
           <Image
             src={Logo}
-            alt="Barbershop logo"
+            alt={t('alt')}
             className="hidden xl:block xl:h-20 xl:w-20"
           />
         </a>
@@ -30,10 +32,10 @@ export const Footer = () => {
           </a>
         </div>
       </div>
-      <a href="/">
+      <a href="/" aria-label={t('ariaLabel')}>
         <Image
           src={Logo}
-          alt="Barbershop logo"
+          alt={t('alt')}
           className="absolute bottom-4 left-4 mr-auto h-12 w-12 xl:hidden"
         />
       </a>

@@ -180,6 +180,11 @@
     "mapTitle": "Google Maps location",
     "button": "Online booking"
   },
+    "Logo": {
+"ariaLabel": "HomePage",
+"alt": "Barbershop logo"
+  },
+
   "GalleryPage": {
     "gallery": "gallery",
     "title_1": "royal facial treatment",
