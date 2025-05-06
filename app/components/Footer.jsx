@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Logo from '@images/logo.png';
 import { FaRegCopyright, FaInstagram } from 'react-icons/fa6';
+import { Navigation } from './ui/Navigation';
 
 export const Footer = () => {
   return (
@@ -12,26 +13,7 @@ export const Footer = () => {
           className="hidden xl:block xl:h-20 xl:w-20"
         />
         <ul className="flex gap-7 xl:mr-[216px] xl:ml-[320px] xl:gap-12">
-          <li>
-            <a href="#barbers" className="hover:text-hover active:text-white">
-              Майстри
-            </a>
-          </li>
-          <li>
-            <a href="#services" className="hover:text-hover active:text-white">
-              Послуги
-            </a>
-          </li>
-          <li>
-            <a href="#gallery" className="hover:text-hover active:text-white">
-              Галерея
-            </a>
-          </li>
-          <li>
-            <a href="#contacts" className="hover:text-hover active:text-white">
-              Контакти
-            </a>
-          </li>
+          <Navigation />
         </ul>
         <div className="mt-8 flex items-center gap-2 xl:mt-0 xl:gap-4">
           <p className="xl:text-[18px]">SOCIAL</p>
@@ -40,6 +22,7 @@ export const Footer = () => {
             href="https://www.instagram.com/pride_barbershop_kiyv/"
             target="_blank"
             rel="noopener noreferrer nofollow"
+            aria-label="instagram"
           >
             <FaInstagram className="hover:fill-hover h-7 w-7 active:fill-white" />
           </a>
@@ -53,7 +36,9 @@ export const Footer = () => {
       />
       <div className="mx-auto flex items-center gap-2">
         <FaRegCopyright className="h-4 w-4 cursor-default fill-[#5F5A5A]" />
-        <p className="text-[10px] xl:text-sm">2025. All Rights Reserved</p>
+        <p className="text-[10px] xl:text-sm">
+          2025. All Rights Reserved | by CleanCode
+        </p>
       </div>
     </footer>
   );
