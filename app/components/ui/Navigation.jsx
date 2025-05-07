@@ -9,15 +9,16 @@ export const Navigation = async ({ onClose }) => {
   return (
     <>
       {keys.map(key => (
-        <Link
-          key={key}
-          href={`/${locale}/#${t(`${key}.anchor`)}`}
-          scroll={true}
-          className="hover-text"
-          onClick={onClose}
-        >
-          {t(`${key}.name`)}
-        </Link>
+        <li key={key}>
+          <Link
+            href={`/${locale}/#${t(`${key}.anchor`)}`}
+            scroll={true}
+            className="hover-text"
+            onClick={onClose}
+          >
+            {t(`${key}.name`)}
+          </Link>
+        </li>
       ))}
     </>
   );
