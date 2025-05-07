@@ -3,7 +3,10 @@ import { getTranslations } from "next-intl/server";
 export const Prices = async () => {
   const t = await getTranslations('ServicesAndPrices');
   return (
-    <section className="bg-[url(/images/prices-background-mob.webp)] bg-cover bg-center bg-no-repeat px-4 py-4 xl:bg-[url(/images/prices-background-desk.webp)] xl:px-18 xl:py-16">
+    <section
+      id="services"
+      className="bg-[url(/images/prices-background-mob.webp)] bg-cover bg-center bg-no-repeat px-4 py-4 xl:bg-[url(/images/prices-background-desk.webp)] xl:px-18 xl:py-16"
+    >
       <div className="rounded-[10px] bg-[linear-gradient(90.00deg,rgba(192,188,188,0.1)0%,rgba(252,246,246,0.1)53.251%,rgba(153,153,153,0.1)100%)] shadow-[inset_0_0_68px_0_rgba(221,216,216,0.05)] backdrop-blur-[12px] xl:h-185">
         <h2 className="mb-4 pt-4 text-center text-[22px]/[30px] text-white uppercase italic xl:mb-10 xl:px-18 xl:pt-12 xl:text-start xl:text-[36px]/[42px]">
           {t('title')}

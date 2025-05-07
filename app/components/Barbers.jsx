@@ -2,10 +2,13 @@ import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const Barbers = async() => {
-    const t = await getTranslations('Barbers');
+export const Barbers = async () => {
+  const t = await getTranslations('Barbers');
   return (
-    <section className="px-4 pt-10 pb-10 xl:px-18 xl:pt-12 xl:pb-28">
+    <section
+      id="barbers"
+      className="px-4 pt-10 pb-10 xl:px-18 xl:pt-12 xl:pb-28"
+    >
       <h2 className="mb-10 text-center text-[22px]/[30px] uppercase italic xl:mb-16 xl:text-[36px]/[42px]">
         {t('title')}
       </h2>
@@ -13,20 +16,24 @@ export const Barbers = async() => {
         <ul className="flex flex-col gap-y-6 xl:w-228 xl:flex-row xl:flex-wrap xl:justify-center xl:gap-x-44 xl:gap-y-12">
           {t.raw('barbers').map((item, idx) => (
             <li
+              tabIndex="0"
               key={idx}
               className="group relative flex w-78 flex-col items-end gap-y-1 xl:w-92 xl:gap-y-4 xl:nth-last-2:order-last"
             >
               <Link
                 href="/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="Link to Аltegio"
                 className="group pointer-events-none flex h-88 w-78 justify-end xl:pointer-events-auto xl:h-108 xl:w-92"
               >
                 {/* Рамка */}
                 <span className="mr-4 h-78 w-60 border-1 xl:mr-1 xl:h-95 xl:w-73"></span>
                 {/* Світлий бекдроп */}
-                <div className="xl: absolute top-6 right-12 z-20 h-81 w-66 bg-[#EACCB6]/10 transition-opacity duration-500 ease-in-out group-hover:opacity-0 group-focus:opacity-0 group-active:opacity-0 xl:top-8 xl:right-10 xl:h-100 xl:w-80"></div>
+                <div className="xl: absolute top-6 right-12 z-200 h-81 w-66 bg-[#EACCB6]/10 transition-opacity duration-500 ease-in-out group-hover:opacity-0 group-focus:opacity-0 xl:top-8 xl:right-10 xl:h-100 xl:w-80"></div>
                 {/* Темний бекдроп */}
-                <div className="xl: absolute top-6 right-12 z-20 h-81 w-66 bg-[#000000]/30 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 xl:top-8 xl:right-10 xl:h-100 xl:w-80">
-                  <p className="k absolute top-4 z-40 w-66 text-center text-[14px]/[22px] font-normal text-white opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 xl:w-80 xl:text-[16px]/[22px]">
+                <div className="xl: absolute top-6 right-12 z-200 h-81 w-66 bg-[#000000]/30 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100 group-focus:opacity-100 xl:top-8 xl:right-10 xl:h-100 xl:w-80">
+                  <p className="k absolute top-4 z-300 w-66 text-center text-[14px]/[22px] font-normal text-white opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100 group-focus:opacity-100 xl:w-80 xl:text-[16px]/[22px]">
                     {item.text_hover}
                   </p>
                 </div>
@@ -36,14 +43,14 @@ export const Barbers = async() => {
                   src={item.image_mob}
                   width={264}
                   height={324}
-                  className="absolute top-6 right-12 block group-hover:hidden group-focus:hidden group-active:hidden xl:hidden"
+                  className="absolute top-6 right-12 block xl:hidden"
                   alt={item.description_for_img}
                 />
                 <Image
                   src={item.image_hover_mob}
                   width={264}
                   height={324}
-                  className="absolute top-6 right-12 hidden group-hover:block group-focus:block group-active:block xl:hidden xl:group-hover:hidden xl:group-focus:hidden"
+                  className="absolute top-6 right-12 z-100 hidden group-focus:block xl:hidden xl:group-focus:hidden"
                   alt={item.description_for_img}
                 />
 
@@ -52,14 +59,14 @@ export const Barbers = async() => {
                   src={item.image_desk}
                   width={320}
                   height={400}
-                  className="hidden xl:absolute xl:top-8 xl:right-10 xl:block xl:group-hover:hidden xl:group-focus:hidden"
+                  className="hidden xl:absolute xl:top-8 xl:right-10 xl:block"
                   alt={item.description_for_img}
                 />
                 <Image
                   src={item.image_hover_desk}
                   width={320}
                   height={400}
-                  className="hidden xl:absolute xl:top-8 xl:right-10 xl:group-hover:block xl:group-focus:block"
+                  className="hidden xl:absolute xl:top-8 xl:right-10 xl:z-100 xl:group-hover:block xl:group-focus:block"
                   alt={item.description_for_img}
                 />
               </Link>
@@ -67,7 +74,12 @@ export const Barbers = async() => {
                 <p className="text-[16px]/[20px] text-white uppercase italic">
                   {item.name}
                 </p>
-                <Link href="/">
+                <Link
+                  href="/"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  aria-label="Link to Аltegio"
+                >
                   <Image
                     className="xl:h-12 xl:w-12"
                     src={item.icon}
