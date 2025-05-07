@@ -5,7 +5,10 @@ import Link from 'next/link';
 export const Barbers = async () => {
   const t = await getTranslations('Barbers');
   return (
-    <section className="px-4 pt-10 pb-10 xl:px-18 xl:pt-12 xl:pb-28">
+    <section
+      id="barbers"
+      className="px-4 pt-10 pb-10 xl:px-18 xl:pt-12 xl:pb-28"
+    >
       <h2 className="mb-10 text-center text-[22px]/[30px] uppercase italic xl:mb-16 xl:text-[36px]/[42px]">
         {t('title')}
       </h2>
@@ -44,7 +47,7 @@ export const Barbers = async () => {
                   src={item.image_hover_mob}
                   width={264}
                   height={324}
-                  className="absolute top-6 right-12 hidden z-100 group-focus:block xl:hidden xl:group-focus:hidden"
+                  className="absolute top-6 right-12 z-100 hidden group-focus:block xl:hidden xl:group-focus:hidden"
                   alt={item.description_for_img}
                 />
 
