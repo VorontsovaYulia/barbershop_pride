@@ -21,7 +21,7 @@ export const Barbers = async () => {
               className="group relative flex w-78 flex-col items-end gap-y-1 xl:w-92 xl:gap-y-4 xl:nth-last-2:order-last"
             >
               <Link
-                href="/"
+                href={item.link}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 aria-label="Link to Аltegio"
@@ -75,7 +75,7 @@ export const Barbers = async () => {
                   {item.name}
                 </p>
                 <Link
-                  href="/"
+                  href={item.link}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   aria-label="Link to Аltegio"
