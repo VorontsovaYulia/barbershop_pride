@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pride-barbershop.com.ua/sitemap.xml
