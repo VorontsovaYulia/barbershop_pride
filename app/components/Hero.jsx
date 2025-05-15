@@ -9,17 +9,15 @@ export const Hero = async () => {
       <Image
         src="/images/hero_mob.webp"
         alt="Hero Background"
-        width={375}
-        height={790}
+        fill
         priority
         className="block object-cover xl:hidden"
-        sizes="(max-width: 1439px) 100vw"
+        sizes="(max-width: 1439px) 375px"
       />
       <Image
         src="/images/hero.webp"
         alt="Hero Background"
-        width={1440}
-        height={920}
+        fill
         className="hidden object-cover xl:block"
         sizes="(min-width: 1440px) 1440px"
       />
