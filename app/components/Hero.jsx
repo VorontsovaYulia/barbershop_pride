@@ -12,7 +12,7 @@ export const Hero = async () => {
         fill
         priority
         className="block object-cover xl:hidden"
-        sizes="(max-width: 1439px) 100vw"
+        sizes="(max-width: 1439px) 375px"
       />
       <Image
         src="/images/hero.webp"
