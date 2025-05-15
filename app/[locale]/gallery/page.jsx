@@ -38,7 +38,7 @@ export default async function Gallery() {
           if (item.type === 'text') {
             return (
               <li key={index} className="flex flex-col justify-center py-12 ">
-                <h3 className="italic uppercase text-[16px] mb-4">{t(item.titleKey)}</h3>
+                <h2 className="italic uppercase text-[16px] mb-4">{t(item.titleKey)}</h2>
                 <p className="text-sm">{t(item.descriptionKey)}</p>
               </li>
             );

@@ -101,7 +101,7 @@ export const Gallery = () => {
                     <button onClick={goPrev} aria-label={t('left')}>
                         <BsArrowLeft size={isMobile ? 32 : 40} className="fill-white hover:fill-hover active:fill-main" />
                     </button>
-                    <Link href='/gallery' className="uppercase italic text-sm xl:text-[16px] border-white text-white hover-border hover-text border-[0.5px] border-solid bg-white/1 shadow-[inset_0px_0px_68px_0px_rgba(221,216,216,0.05)] backdrop-blur-[48px] px-6 py-1 xl:px-8 xl:py-2">{t('more')}</Link>
+                    <Link href='/gallery' aria-label={t('link')} className="uppercase italic text-sm xl:text-[16px] border-white text-white hover-border hover-text border-[0.5px] border-solid bg-white/1 shadow-[inset_0px_0px_68px_0px_rgba(221,216,216,0.05)] backdrop-blur-[48px] px-6 py-1 xl:px-8 xl:py-2">{t('more')}</Link>
                     <button onClick={goNext} aria-label={t('right')}>
                         <BsArrowRight size={isMobile ? 32 : 40} className="fill-white hover:fill-hover active:fill-main" />
                     </button>
