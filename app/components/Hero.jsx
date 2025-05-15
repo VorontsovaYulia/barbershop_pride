@@ -12,14 +12,14 @@ export const Hero = async () => {
         fill
         priority
         className="block object-cover xl:hidden"
-        sizes="(max-width: 1440px) 100vw"
+        sizes="(max-width: 1439px) 100vw"
       />
       <Image
         src="/images/hero.webp"
         alt="Hero Background"
         fill
         className="hidden object-cover xl:block"
-        sizes="(min-width: 1440px) 100vw"
+        sizes="(min-width: 1440px) 1440px"
       />
       <div className="absolute top-[464px] right-[72px] inline-flex origin-top-right rotate-90 items-center justify-end gap-4 max-xl:hidden">
         <span className="text-[18px]/[26px]">SOCIAL</span>
