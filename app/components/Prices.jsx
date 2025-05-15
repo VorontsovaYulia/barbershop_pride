@@ -11,7 +11,7 @@ export const Prices = async () => {
         <h2 className="mb-4 pt-4 text-center text-[22px]/[30px] text-white uppercase italic xl:mb-10 xl:px-18 xl:pt-12 xl:text-start xl:text-[36px]/[42px]">
           {t('title')}
         </h2>
-        <ul className="flex flex-col justify-center gap-y-2 px-4 pb-9 text-[14px]/[20px] text-white xl:h-130 xl:flex-wrap xl:gap-x-28 xl:gap-y-6 xl:px-18 xl:pb-0 xl:text-[20px]/[26px]">
+        <ul className="flex flex-col justify-center gap-y-2 px-4 pb-8 text-[14px]/[20px] text-white xl:h-130 xl:flex-wrap xl:gap-x-28 xl:gap-y-6 xl:px-18 xl:pb-0 xl:text-[20px]/[26px]">
           {t.raw('servicesAndPrices').map((item, idx) => (
             <li
               key={idx}
