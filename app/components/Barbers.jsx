@@ -24,7 +24,7 @@ export const Barbers = async () => {
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                aria-label="Link to Аltegio"
+                aria-label={item.aria_label}
                 className="group pointer-events-none flex h-88 w-78 justify-end xl:pointer-events-auto xl:h-108 xl:w-92"
               >
                 {/* Рамка */}
@@ -78,7 +78,7 @@ export const Barbers = async () => {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  aria-label="Link to Аltegio"
+                  aria-label={item.aria_label}
                 >
                   <Image
                     className="xl:h-12 xl:w-12"
