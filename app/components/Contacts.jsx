@@ -14,8 +14,8 @@ export const Contacts = async () => {
             <LuMapPin className="h-5 w-5 cursor-default xl:h-7 xl:w-7" />
 
             <div>
-              <p className="block">{t('RCaddress')}</p>{' '}
-              <p className="block">{t('address')}</p>
+              <address className="block">{t('RCaddress')}</address>{' '}
+              <address className="block">{t('address')}</address>
             </div>
           </li>
           <li className="flex items-center gap-4">
