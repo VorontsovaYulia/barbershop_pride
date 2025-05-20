@@ -40,6 +40,7 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale}>
       <Head>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link
           rel="preload"
           as="image"
