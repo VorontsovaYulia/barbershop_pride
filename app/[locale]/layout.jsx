@@ -42,28 +42,60 @@ export async function generateMetadata({ params }) {
       follow: true,
     },
     other: {
-      'ld+json': JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Барбершоп Pride",
-        "image": "https://pride-barbershop.com.ua/images/logo.png",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Берестейський проспект 67а",
-          "addressLocality": "Київ",
-          "postalCode": "03062",
-          "addressCountry": "UA"
+      'ld+json': JSON.stringify([
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Барбершоп Pride",
+          "image": "https://pride-barbershop.com.ua/images/logo.png",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Берестейський проспект 67а",
+            "addressLocality": "Київ",
+            "postalCode": "03062",
+            "addressCountry": "UA"
+          },
+          "telephone": "+380997774099",
+          "openingHours": "Mo-Su 10:00-20:00",
+          "url": "https://pride-barbershop.com.ua",
+          "sameAs": [
+            "https://www.instagram.com/pride_barbershop_kiyv/"
+          ]
         },
-        "telephone": "+380997774099",
-        "openingHours": "Mo-Su 10:00-20:00",
-        "url": "https://pride-barbershop.com.ua",
-        "sameAs": [
-          "https://www.instagram.com/pride_barbershop_kiyv/"
-        ]
-      })
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Барбершоп Pride",
+          "url": "https://pride-barbershop.com.ua",
+          "logo": "https://pride-barbershop.com.ua/images/logo.png",
+          "sameAs": [
+            "https://www.instagram.com/pride_barbershop_kiyv/"
+          ]
+        }, {
+          "@context": "https://schema.org/",
+          "@type": "WebSite",
+          "name": "Барбершоп Pride",
+          "url": "https://pride-barbershop.com.ua",
+        },
+        {
+          "@context": "https://schema.org/",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Головна",
+            "item": "https://pride-barbershop.com.ua"
+          }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Галерея",
+            "item": "https://pride-barbershop.com.ua/gallery"
+          }]
+        }
+      ])
     }
   };
-}
+};
 
 export default async function RootLayout({ children, params }) {
   const { locale } = await params;
@@ -74,23 +106,6 @@ export default async function RootLayout({ children, params }) {
       <Head>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="preload" as="image" href="/images/hero_mob.webp" type="image/webp" />
-
-        {/* Organization */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Барбершоп Pride",
-              "url": "https://pride-barbershop.com.ua",
-              "logo": "https://pride-barbershop.com.ua/images/logo.png",
-              "sameAs": [
-                "https://www.instagram.com/pride_barbershop_kiyv/"
-              ]
-            }),
-          }}
-        />
       </Head>
 
       <body
