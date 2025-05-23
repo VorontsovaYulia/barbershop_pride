@@ -18,7 +18,7 @@
     "title": "Чому обирають нас",
     "advantages": [
       {
-        "icon": "icons/advantages-1.svg",
+        "icon": "/icons/advantages-1.svg",
         "text": "Кожна стрижка - діалог",
         "description": "Картинка ножиці"
       },
@@ -45,7 +45,7 @@
         "image_hover_desk": "/images/barbers-Bohdan-desk-hover.jpg",
         "text_hover": "Від класики до трендів",
         "description_for_img": "Фото майстра Богдана",
-        "icon": "icons/barbers-altegio.svg",
+        "icon": "/icons/barbers-altegio.svg",
         "link": "https://n1364204.alteg.io/company/566325/personal/menu?o=m2644140",
         "aria_label": "Посилання на Altegio Богдана"
       },
@@ -186,8 +186,8 @@
     "button": "Онлайн запис"
   },
   "Logo": {
-"ariaLabel": "Головна сторінка",
-"alt": "Логотип барбершопу"
+    "ariaLabel": "Головна сторінка",
+    "alt": "Логотип барбершопу"
   },
   "GalleryPage": {
     "gallery": "галерея",
