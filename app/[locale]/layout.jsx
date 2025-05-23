@@ -118,7 +118,8 @@ export default async function RootLayout({ children, params }) {
               name: 'Барбершоп Pride',
               url: 'https://pride-barbershop.com.ua',
               logo: 'https://pride-barbershop.com.ua/images/logo.png',
-              sameAs: ['https://www.instagram.com/pride_barbershop_kiyv/'],
+              sameAs: 'https://www.instagram.com/pride_barbershop_kiyv/',
+              telephone: '+380997774099',
             }),
           }}
         />
