@@ -80,11 +80,10 @@ export const Barbers = async () => {
                   rel="noopener noreferrer nofollow"
                   aria-label={item.aria_label}
                 >
-                  <Image
+                  <img
                     className="xl:h-12 xl:w-12"
                     src={item.icon}
                     alt="Аltegio"
-                    unoptimized={true}
                     height={40}
                     width={40}
                   />
