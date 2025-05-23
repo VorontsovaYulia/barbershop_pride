@@ -27,48 +27,48 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
-  const combinedSchema = [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'LocalBusiness',
-      name: 'Барбершоп Pride',
-      image: 'https://pride-barbershop.com.ua/images/logo.png',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Берестейський проспект 67а',
-        addressLocality: 'Київ',
-        postalCode: '03062',
-        addressCountry: 'UA',
-      },
-      telephone: '+380997774099',
-      openingHours: 'Mo-Su 10:00-20:00',
-      url: 'https://pride-barbershop.com.ua',
-      sameAs: ['https://www.instagram.com/pride_barbershop_kiyv/'],
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Барбершоп Pride',
-      url: 'https://pride-barbershop.com.ua',
-      logo: 'https://pride-barbershop.com.ua/images/logo.png',
-      sameAs: ['https://www.instagram.com/pride_barbershop_kiyv/'],
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: 'Барбершоп Pride',
-      url: 'https://pride-barbershop.com.ua',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate:
-            'https://pride-barbershop.com.ua/search?q={search_term_string}',
-        },
-        'query-input': 'required name=search_term_string',
-      },
-    },
-  ];
+  // const combinedSchema = [
+  //   {
+  //     '@context': 'https://schema.org',
+  //     '@type': 'LocalBusiness',
+  //     name: 'Барбершоп Pride',
+  //     image: 'https://pride-barbershop.com.ua/images/logo.png',
+  //     address: {
+  //       '@type': 'PostalAddress',
+  //       streetAddress: 'Берестейський проспект 67а',
+  //       addressLocality: 'Київ',
+  //       postalCode: '03062',
+  //       addressCountry: 'UA',
+  //     },
+  //     telephone: '+380997774099',
+  //     openingHours: 'Mo-Su 10:00-20:00',
+  //     url: 'https://pride-barbershop.com.ua',
+  //     sameAs: ['https://www.instagram.com/pride_barbershop_kiyv/'],
+  //   },
+  //   {
+  //     '@context': 'https://schema.org',
+  //     '@type': 'Organization',
+  //     name: 'Барбершоп Pride',
+  //     url: 'https://pride-barbershop.com.ua',
+  //     logo: 'https://pride-barbershop.com.ua/images/logo.png',
+  //     sameAs: ['https://www.instagram.com/pride_barbershop_kiyv/'],
+  //   },
+  //   {
+  //     '@context': 'https://schema.org',
+  //     '@type': 'WebSite',
+  //     name: 'Барбершоп Pride',
+  //     url: 'https://pride-barbershop.com.ua',
+  //     potentialAction: {
+  //       '@type': 'SearchAction',
+  //       target: {
+  //         '@type': 'EntryPoint',
+  //         urlTemplate:
+  //           'https://pride-barbershop.com.ua/search?q={search_term_string}',
+  //       },
+  //       'query-input': 'required name=search_term_string',
+  //     },
+  //   },
+  // ];
 
   return {
     title: t('title'),
@@ -87,9 +87,9 @@ export async function generateMetadata({ params }) {
     icons: {
       icon: '/favicon.ico',
     },
-    other: {
-      'script:ld+json': JSON.stringify(combinedSchema),
-    },
+    // other: {
+    //   'script:ld+json': JSON.stringify(combinedSchema),
+    // },
   };
 }
 
@@ -108,7 +108,21 @@ export default async function RootLayout({ children, params }) {
           type="image/webp"
         />
       </Head> */}
-
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Барбершоп Pride',
+              url: 'https://pride-barbershop.com.ua',
+              logo: 'https://pride-barbershop.com.ua/images/logo.png',
+              sameAs: ['https://www.instagram.com/pride_barbershop_kiyv/'],
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${openSans.variable} ${archivoBlack.variable} text-main font-openSans bg-black text-sm font-normal antialiased xl:text-xl`}
       >
