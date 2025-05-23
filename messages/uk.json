@@ -23,12 +23,12 @@
         "description": "Картинка ножиці"
       },
       {
-        "icon": "icons/advantages-2.svg",
+        "icon": "/icons/advantages-2.svg",
         "text": "Кожна зустріч - ритуал",
         "description": "Картинка леза"
       },
       {
-        "icon": "icons/advantages-3.svg",
+        "icon": "/icons/advantages-3.svg",
         "text": "Кожен клієнт - історія",
         "description": "Картинка чоловік"
       }
@@ -57,7 +57,7 @@
         "image_hover_desk": "/images/barbers-Kate-desk-hover.jpg",
         "text_hover": "Твій новий стиль уже в її голові",
         "description_for_img": "Фото майстра Катерини",
-        "icon": "icons/barbers-altegio.svg",
+        "icon": "/icons/barbers-altegio.svg",
         "link": "https://n1363857.alteg.io/company/566325/personal/menu?o=m2185251",
         "aria_label": "Посилання на Altegio Катерини"
       },
@@ -69,7 +69,7 @@
         "image_hover_desk": "/images/barbers-Dima-desk-hover.jpg",
         "text_hover": "Точність у кожному русі",
         "description_for_img": "Фото майстра Дмитра",
-        "icon": "icons/barbers-altegio.svg",
+        "icon": "/icons/barbers-altegio.svg",
         "link": "https://n1364205.alteg.io/company/566325/personal/menu?o=m2234082",
         "aria_label": "Посилання на Altegio Дмитра"
       },
@@ -81,7 +81,7 @@
         "image_hover_desk": "/images/barbers-Darina-desk-hover.jpg",
         "text_hover": "Руками стрижу - серцем творю",
         "description_for_img": "Фото майстра Дарини",
-        "icon": "icons/barbers-altegio.svg",
+        "icon": "/icons/barbers-altegio.svg",
         "link": "https://n1363855.alteg.io/company/566325/personal/menu?o=m2839444",
         "aria_label": "Посилання на Altegio Дарини"
       }
