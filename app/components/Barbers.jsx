@@ -23,7 +23,7 @@ export const Barbers = async () => {
               <Link
                 href={item.link}
                 target="_blank"
-                rel="noopener noreferrer nofollow"
+                rel="nofollow noopener noreferrer"
                 aria-label={item.aria_label}
                 className="group pointer-events-none flex h-88 w-78 justify-end xl:pointer-events-auto xl:h-108 xl:w-92"
               >
@@ -77,13 +77,13 @@ export const Barbers = async () => {
                 <Link
                   href={item.link}
                   target="_blank"
-                  rel="noopener noreferrer nofollow"
+                  rel="nofollow noopener noreferrer"
                   aria-label={item.aria_label}
                 >
-                  <img
+                  <Image
                     className="xl:h-12 xl:w-12"
                     src={item.icon}
-                    alt="Аltegio"
+                    alt="Altegio"
                     height={40}
                     width={40}
                   />

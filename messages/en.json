@@ -18,17 +18,17 @@
     "title": "Why choose us",
     "advantages": [
       {
-        "icon": "icons/advantages-1.svg",
+        "icon": "/icons/advantages-1.svg",
         "text": "Every cut is a conversation",
         "description": "Scissors image"
       },
       {
-        "icon": "icons/advantages-2.svg",
+        "icon": "/icons/advantages-2.svg",
         "text": "Each encounter is a ritual",
         "description": "Blade image"
       },
       {
-        "icon": "icons/advantages-3.svg",
+        "icon": "/icons/advantages-3.svg",
         "text": "Every client is a story",
         "description": "Man image"
       }
@@ -45,7 +45,7 @@
         "image_hover_desk": "/images/barbers-Bohdan-desk-hover.jpg",
         "text_hover": "From classics to trends",
         "description_for_img": "Photo of Master Bogdan",
-        "icon": "icons/barbers-altegio.svg",
+        "icon": "/icons/barbers-altegio.svg",
         "link": "https://n1364204.alteg.io/company/566325/personal/menu?o=m2644140",
         "aria_label": "Link to Bogdan's Altegio"
       },
@@ -57,7 +57,7 @@
         "image_hover_desk": "/images/barbers-Kate-desk-hover.jpg",
         "text_hover": "Your new style is already in her head",
         "description_for_img": "Photo of Master Katerina",
-        "icon": "icons/barbers-altegio.svg",
+        "icon": "/icons/barbers-altegio.svg",
         "link": "https://n1363857.alteg.io/company/566325/personal/menu?o=m2185251",
         "aria_label": "Link to Kateryna's Altegio"
       },
@@ -69,7 +69,7 @@
         "image_hover_desk": "/images/barbers-Dima-desk-hover.jpg",
         "text_hover": "Precision in every move.",
         "description_for_img": "Photo of Master Dmytro",
-        "icon": "icons/barbers-altegio.svg",
+        "icon": "/icons/barbers-altegio.svg",
         "link": "https://n1364205.alteg.io/company/566325/personal/menu?o=m2234082",
         "aria_label": "Link to Dmytro's Altegio"
       },
@@ -81,7 +81,7 @@
         "image_hover_desk": "/images/barbers-Darina-desk-hover.jpg",
         "text_hover": "Haircuts by hand, art from the heart",
         "description_for_img": "Photo of Master Daryna",
-        "icon": "icons/barbers-altegio.svg",
+        "icon": "/icons/barbers-altegio.svg",
         "link": "https://n1363855.alteg.io/company/566325/personal/menu?o=m2839444",
         "aria_label": "Link to Daryna's Altegio"
       }
