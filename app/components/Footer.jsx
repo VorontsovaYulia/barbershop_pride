@@ -25,7 +25,7 @@ export const Footer = async () => {
           <a
             href="https://www.instagram.com/pride_barbershop_kiyv/"
             target="_blank"
-            rel="noopener noreferrer nofollow"
+            rel="nofollow noopener noreferrer"
             aria-label="instagram"
           >
             <FaInstagram className="hover:fill-hover h-7 w-7 active:fill-white" />
