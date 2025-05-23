@@ -8,7 +8,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: t('galleryTitle'),
-    description: t('galleryDescription'),
+    description: t('galleryDescription')
   };
 }
 export default async function Gallery() {
