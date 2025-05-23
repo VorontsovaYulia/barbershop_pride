@@ -52,12 +52,9 @@ export default async function RootLayout({ children, params }) {
     <html lang={locale}>
       <Head>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link
-          rel="preload"
-          as="image"
-          href="/images/hero_mob.webp"
-          type="image/webp"
-        />
+        <link rel="preload" as="image" href="/images/hero_mob.webp" type="image/webp" />
+
+        {/* LocalBusiness */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -82,7 +79,25 @@ export default async function RootLayout({ children, params }) {
             }),
           }}
         />
+
+        {/* Organization */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Барбершоп Pride",
+              "url": "https://pride-barbershop.com.ua",
+              "logo": "https://pride-barbershop.com.ua/images/logo.png",
+              "sameAs": [
+                "https://www.instagram.com/pride_barbershop_kiyv/"
+              ]
+            }),
+          }}
+        />
       </Head>
+
       <body
         className={`${openSans.variable} ${archivoBlack.variable} text-main font-openSans bg-black text-sm font-normal antialiased xl:text-xl`}
       >
