@@ -1,7 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { Archivo_Black, Open_Sans } from 'next/font/google';
-// import Head from 'next/head';
 import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import { Navigation } from '../components/ui/Navigation';
@@ -27,49 +26,6 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
-  // const combinedSchema = [
-  //   {
-  //     '@context': 'https://schema.org',
-  //     '@type': 'LocalBusiness',
-  //     name: 'Барбершоп Pride',
-  //     image: 'https://pride-barbershop.com.ua/images/logo.png',
-  //     address: {
-  //       '@type': 'PostalAddress',
-  //       streetAddress: 'Берестейський проспект 67а',
-  //       addressLocality: 'Київ',
-  //       postalCode: '03062',
-  //       addressCountry: 'UA',
-  //     },
-  //     telephone: '+380997774099',
-  //     openingHours: 'Mo-Su 10:00-20:00',
-  //     url: 'https://pride-barbershop.com.ua',
-  //     sameAs: ['https://www.instagram.com/pride_barbershop_kiyv/'],
-  //   },
-  //   {
-  //     '@context': 'https://schema.org',
-  //     '@type': 'Organization',
-  //     name: 'Барбершоп Pride',
-  //     url: 'https://pride-barbershop.com.ua',
-  //     logo: 'https://pride-barbershop.com.ua/images/logo.png',
-  //     sameAs: ['https://www.instagram.com/pride_barbershop_kiyv/'],
-  //   },
-  //   {
-  //     '@context': 'https://schema.org',
-  //     '@type': 'WebSite',
-  //     name: 'Барбершоп Pride',
-  //     url: 'https://pride-barbershop.com.ua',
-  //     potentialAction: {
-  //       '@type': 'SearchAction',
-  //       target: {
-  //         '@type': 'EntryPoint',
-  //         urlTemplate:
-  //           'https://pride-barbershop.com.ua/search?q={search_term_string}',
-  //       },
-  //       'query-input': 'required name=search_term_string',
-  //     },
-  //   },
-  // ];
-
   return {
     title: t('title'),
     description: t('description'),
@@ -87,9 +43,6 @@ export async function generateMetadata({ params }) {
     icons: {
       icon: '/favicon.ico',
     },
-    // other: {
-    //   'script:ld+json': JSON.stringify(combinedSchema),
-    // },
   };
 }
 
@@ -99,16 +52,24 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang={locale}>
-      {/* <Head>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <head>
         <link
           rel="preload"
           as="image"
           href="/images/hero_mob.webp"
           type="image/webp"
         />
-      </Head> */}
-      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Барбершоп Pride',
+              url: 'https://pride-barbershop.com.ua',
+            }),
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -120,6 +81,27 @@ export default async function RootLayout({ children, params }) {
               logo: 'https://pride-barbershop.com.ua/images/logo.png',
               sameAs: 'https://www.instagram.com/pride_barbershop_kiyv/',
               telephone: '+380997774099',
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              name: 'Барбершоп Pride',
+              image: 'https://pride-barbershop.com.ua/images/logo.png',
+              url: 'https://pride-barbershop.com.ua',
+              telephone: '+380997774099',
+              openingHours: 'Mo-Su 10:00-20:00',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Берестейський проспект 67а',
+                addressLocality: 'Київ',
+                postalCode: '03062',
+                addressCountry: 'UA',
+              },
             }),
           }}
         />
