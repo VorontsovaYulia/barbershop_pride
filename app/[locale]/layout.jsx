@@ -41,6 +41,27 @@ export async function generateMetadata({ params }) {
       index: true,
       follow: true,
     },
+    other: {
+      'ld+json': JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Барбершоп Pride",
+        "image": "https://pride-barbershop.com.ua/images/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Берестейський проспект 67а",
+          "addressLocality": "Київ",
+          "postalCode": "03062",
+          "addressCountry": "UA"
+        },
+        "telephone": "+380997774099",
+        "openingHours": "Mo-Su 10:00-20:00",
+        "url": "https://pride-barbershop.com.ua",
+        "sameAs": [
+          "https://www.instagram.com/pride_barbershop_kiyv/"
+        ]
+      })
+    }
   };
 }
 
@@ -53,32 +74,6 @@ export default async function RootLayout({ children, params }) {
       <Head>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="preload" as="image" href="/images/hero_mob.webp" type="image/webp" />
-
-        {/* LocalBusiness */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Барбершоп Pride",
-              "image": "https://pride-barbershop.com.ua/images/logo.png",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Берестейський проспект 67а",
-                "addressLocality": "Київ",
-                "postalCode": "03062",
-                "addressCountry": "UA"
-              },
-              "telephone": "+380997774099",
-              "openingHours": "Mo-Su 10:00-20:00",
-              "url": "https://pride-barbershop.com.ua",
-              "sameAs": [
-                "https://www.instagram.com/pride_barbershop_kiyv/"
-              ]
-            }),
-          }}
-        />
 
         {/* Organization */}
         <script
