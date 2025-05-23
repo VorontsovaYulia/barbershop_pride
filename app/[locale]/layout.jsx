@@ -30,6 +30,17 @@ export async function generateMetadata({ params }) {
   return {
     title: t('title'),
     description: t('description'),
+    alternates: {
+      canonical: `https://pride-barbershop.com.ua/${locale}`,
+      languages: {
+        uk: 'https://pride-barbershop.com.ua/uk',
+        en: 'https://pride-barbershop.com.ua/en',
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 }
 
@@ -46,6 +57,30 @@ export default async function RootLayout({ children, params }) {
           as="image"
           href="/images/hero_mob.webp"
           type="image/webp"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Барбершоп Pride",
+              "image": "https://pride-barbershop.com.ua/images/logo.png",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Берестейський проспект 67а",
+                "addressLocality": "Київ",
+                "postalCode": "03062",
+                "addressCountry": "UA"
+              },
+              "telephone": "+380997774099",
+              "openingHours": "Mo-Su 10:00-20:00",
+              "url": "https://pride-barbershop.com.ua",
+              "sameAs": [
+                "https://www.instagram.com/pride_barbershop_kiyv/"
+              ]
+            }),
+          }}
         />
       </Head>
       <body
