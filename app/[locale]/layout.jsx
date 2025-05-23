@@ -27,62 +27,48 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
-  // LocalBusiness schema
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: 'Барбершоп Pride',
-    image: 'https://pride-barbershop.com.ua/images/logo.png',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Берестейський проспект 67а',
-      addressLocality: 'Київ',
-      postalCode: '03062',
-      addressCountry: 'UA',
+  const combinedSchema = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'Барбершоп Pride',
+      image: 'https://pride-barbershop.com.ua/images/logo.png',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Берестейський проспект 67а',
+        addressLocality: 'Київ',
+        postalCode: '03062',
+        addressCountry: 'UA',
+      },
+      telephone: '+380997774099',
+      openingHours: 'Mo-Su 10:00-20:00',
+      url: 'https://pride-barbershop.com.ua',
+      sameAs: ['https://www.instagram.com/pride_barbershop_kiyv/'],
     },
-    telephone: '+380997774099',
-    openingHours: 'Mo-Su 10:00-20:00',
-    url: 'https://pride-barbershop.com.ua',
-    sameAs: ['https://www.instagram.com/pride_barbershop_kiyv/'],
-  };
-
-  // Organization schema
-  const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Барбершоп Pride',
-    url: 'https://pride-barbershop.com.ua',
-    logo: 'https://pride-barbershop.com.ua/images/logo.png',
-    sameAs: ['https://www.instagram.com/pride_barbershop_kiyv/'],
-  };
-
-  // WebSite schema
-  const webSiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Барбершоп Pride',
-    url: 'https://pride-barbershop.com.ua',
-  };
-
-  // BreadcrumbList schema
-  const breadcrumbListSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Головна',
-        item: 'https://pride-barbershop.com.ua',
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Барбершоп Pride',
+      url: 'https://pride-barbershop.com.ua',
+      logo: 'https://pride-barbershop.com.ua/images/logo.png',
+      sameAs: ['https://www.instagram.com/pride_barbershop_kiyv/'],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Барбершоп Pride',
+      url: 'https://pride-barbershop.com.ua',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate:
+            'https://pride-barbershop.com.ua/search?q={search_term_string}',
+        },
+        'query-input': 'required name=search_term_string',
       },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Галерея',
-        item: 'https://pride-barbershop.com.ua/gallery',
-      },
-    ],
-  };
+    },
+  ];
 
   return {
     title: t('title'),
@@ -102,13 +88,7 @@ export async function generateMetadata({ params }) {
       icon: '/favicon.ico',
     },
     other: {
-      // Correct key for JSON-LD scripts
-      'script:ld+json': [
-        JSON.stringify(localBusinessSchema),
-        JSON.stringify(organizationSchema),
-        JSON.stringify(webSiteSchema),
-        JSON.stringify(breadcrumbListSchema),
-      ],
+      'script:ld+json': JSON.stringify(combinedSchema),
     },
   };
 }
