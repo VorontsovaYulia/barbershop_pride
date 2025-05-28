@@ -51,8 +51,23 @@ export default async function RootLayout({ children, params }) {
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale}>
+    <html lang={locale} prefix="og: http://ogp.me/ns#">
       <head>
+        <meta property="og:title" content="Барбершоп Pride – стильні чоловічі стрижки. Київ, Нивки" />
+        <meta property="og:description" content="Барбершоп Pride ✂️ Барбершоп на Нивках ▶️ Запишись онлайн ☎️ +380997774099 ✅ Чекаємо саме на тебе!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pride-barbershop.com.ua" />
+        <meta property="og:site_name" content="Барбершоп Pride – стильні чоловічі стрижки. Київ, Нивки" />
+        <meta property="og:image" content="/public/images/socialVersion.jpg" />
+        <meta property="og:image:width" content="1080" />
+        <meta property="og:image:height" content="1080" />
+        <meta property="og:locale" content={locale} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Барбершоп Pride – стильні чоловічі стрижки. Київ, Нивки" />
+        <meta name="twitter:description" content="Барбершоп Pride ✂️ Барбершоп на Нивках ▶️ Запишись онлайн ☎️ +380997774099 ✅ Чекаємо саме на тебе!" />
+        <meta name="twitter:image" content="/public/images/socialVersion.jpg" />
+
         <link
           rel="preload"
           as="image"
