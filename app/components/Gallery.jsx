@@ -61,6 +61,7 @@ export const Gallery = () => {
                     modules={[Navigation]}
                     slidesPerView="auto"
                     centeredSlides
+                    grabCursor
                     loop
                     speed={500}
                     spaceBetween={gap}

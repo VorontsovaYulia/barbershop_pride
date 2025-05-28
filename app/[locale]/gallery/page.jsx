@@ -9,6 +9,13 @@ export async function generateMetadata({ params }) {
   return {
     title: t('galleryTitle'),
     description: t('galleryDescription'),
+    alternates: {
+      canonical: `https://pride-barbershop.com.ua/${locale}/gallery`,
+      languages: {
+        uk: 'https://pride-barbershop.com.ua/uk/gallery',
+        en: 'https://pride-barbershop.com.ua/en/gallery',
+      },
+    },
   };
 }
 export default async function Gallery() {
