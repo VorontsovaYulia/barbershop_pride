@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
-import { IoLogoInstagram } from 'react-icons/io5';
 import Image from 'next/image';
+import { IoLogoInstagram } from 'react-icons/io5';
 
 export const Hero = async () => {
   const t = await getTranslations('HeroSection');
@@ -12,8 +12,8 @@ export const Hero = async () => {
         fill
         priority
         className="block xl:hidden"
-        sizes="(max-width: 375px) 375px, 100vw"
-        style={{ objectFit: "cover" }}
+        sizes="(max-width: 375px) 375px"
+        style={{ objectFit: 'cover' }}
       />
       <Image
         src="/images/hero.webp"
@@ -21,7 +21,7 @@ export const Hero = async () => {
         fill
         className="hidden xl:block"
         sizes="(min-width: 1440px) 1440px"
-        style={{ objectFit: "cover" }}
+        style={{ objectFit: 'cover' }}
       />
       <div className="absolute top-[464px] right-[72px] inline-flex origin-top-right rotate-90 items-center justify-end gap-4 max-xl:hidden">
         <span className="text-[18px]/[26px]">SOCIAL</span>
@@ -36,7 +36,7 @@ export const Hero = async () => {
           <IoLogoInstagram className="group-hover-fill h-6 w-6" />
         </a>
       </div>
-      <h1 className='title-hidden'>Pride – чоловічі стрижки, Київ</h1>
+      <h1 className="title-hidden">Pride – чоловічі стрижки, Київ</h1>
       <h2 className="font-archivo-black relative z-10 mx-auto mt-60 max-w-[750px] text-center text-[38px]/[46px] xl:mt-[174px] xl:text-[96px]/[124px]">
         PRIDE BARBERSHOP
       </h2>
