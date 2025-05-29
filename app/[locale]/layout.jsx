@@ -67,6 +67,9 @@ export default async function RootLayout({ children, params }) {
         <meta name="twitter:title" content="Барбершоп Pride – стильні чоловічі стрижки. Київ, Нивки" />
         <meta name="twitter:description" content="Барбершоп Pride ✂️ Барбершоп на Нивках ▶️ Запишись онлайн ☎️ +380997774099 ✅ Чекаємо саме на тебе!" />
         <meta name="twitter:image" content="/images/socialVersion.jpg" />
+        <meta name="twitter:site" content="@pridebarbershop" />
+        <meta name="twitter:creator" content="@pridebarbershop" />
+        
         <link
           rel="preload"
           as="image"
