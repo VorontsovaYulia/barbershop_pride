@@ -6,9 +6,9 @@ export const Contacts = async () => {
   return (
     <section id="contacts" className="xl:flex">
       <div className="px-6 pt-10 pb-12 xl:px-18 xl:pt-20">
-        <h2 className="text-center text-[22px]/[30px] uppercase italic xl:text-start xl:text-[36px]/[42px]">
+        <h3 className="text-center text-[22px]/[30px] uppercase italic xl:text-start xl:text-[36px]/[42px]">
           {t('title')}
-        </h2>
+        </h3>
         <ul className="my-6 flex flex-col gap-6 xl:my-[42px]">
           <li className="flex items-start gap-2 xl:gap-4">
             <LuMapPin className="h-5 w-5 cursor-default xl:h-7 xl:w-7" />

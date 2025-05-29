@@ -9,9 +9,9 @@ export const Barbers = async () => {
       id="barbers"
       className="px-4 pt-10 pb-10 xl:px-18 xl:pt-12 xl:pb-28"
     >
-      <h2 className="mb-10 text-center text-[22px]/[30px] uppercase italic xl:mb-16 xl:text-[36px]/[42px]">
+      <h3 className="mb-10 text-center text-[22px]/[30px] uppercase italic xl:mb-16 xl:text-[36px]/[42px]">
         {t('title')}
-      </h2>
+      </h3>
       <div className="flex items-center justify-end pr-2 pl-6 xl:justify-center xl:xl:pr-0 xl:pl-0">
         <ul className="flex flex-col gap-y-6 xl:w-228 xl:flex-row xl:flex-wrap xl:justify-center xl:gap-x-44 xl:gap-y-12">
           {t.raw('barbers').map((item, idx) => (

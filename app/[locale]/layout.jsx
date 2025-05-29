@@ -80,7 +80,7 @@ export default async function RootLayout({ children, params }) {
               '@context': 'https://schema.org',
               '@type': 'WebSite',
               name: 'Барбершоп Pride',
-              url: 'https://pride-barbershop.com.ua',
+              url: `https://pride-barbershop.com.ua/${locale}`,
             }),
           }}
         />
@@ -91,7 +91,7 @@ export default async function RootLayout({ children, params }) {
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Барбершоп Pride',
-              url: 'https://pride-barbershop.com.ua',
+              url: `https://pride-barbershop.com.ua/${locale}`,
               logo: 'https://pride-barbershop.com.ua/images/logo.png',
               sameAs: 'https://www.instagram.com/pride_barbershop_kiyv/',
               telephone: '+380997774099',
@@ -103,10 +103,33 @@ export default async function RootLayout({ children, params }) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: locale === 'uk' ? 'Головна' : 'Home',
+                  item: `https://pride-barbershop.com.ua/${locale}`,
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: locale === 'uk' ? 'Галерея' : 'Gallery',
+                  item: `https://pride-barbershop.com.ua/${locale}/gallery`,
+                },
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               name: 'Барбершоп Pride',
               image: 'https://pride-barbershop.com.ua/images/logo.png',
-              url: 'https://pride-barbershop.com.ua',
+              url: `https://pride-barbershop.com.ua/${locale}`,
               telephone: '+380997774099',
               openingHours: 'Mo-Su 10:00-20:00',
               address: {

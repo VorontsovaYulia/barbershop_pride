@@ -6,9 +6,9 @@ export const Advantages = async () => {
 
   return (
     <section className="px-4 pt-12 pb-8 xl:px-18 xl:pt-20 xl:pb-10">
-      <h2 className="mb-10 text-center text-[22px]/[30px] uppercase italic xl:mb-16 xl:text-[36px]/[42px]">
+      <h3 className="mb-10 text-center text-[22px]/[30px] uppercase italic xl:mb-16 xl:text-[36px]/[42px]">
         {t('title')}
-      </h2>
+      </h3>
       <div className="flex items-center justify-center">
         <ul className="flex max-w-60 flex-col gap-y-10 xl:min-w-212 xl:flex-row xl:justify-between">
           {t.raw('advantages').map((item, idx) => (
