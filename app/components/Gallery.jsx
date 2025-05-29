@@ -51,7 +51,7 @@ export const Gallery = () => {
 
     return (
         <section id='gallery' className="py-10 xl:pt-20 xl:pb-[106px]">
-            <h2 className="text-center uppercase italic text-[22px]/[30px] xl:text-[36px]/[42px] mb-6 xl:mb-10">{t('gallery')}</h2>
+            <h3 className="text-center uppercase italic text-[22px]/[30px] xl:text-[36px]/[42px] mb-6 xl:mb-10">{t('gallery')}</h3>
 
             <div className="relative max-w-[1440px] mx-auto overflow-hidden px-4">
                 <style jsx global>{`div .swiper-slide {display: flex}`}</style>

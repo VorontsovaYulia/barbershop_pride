@@ -36,7 +36,7 @@ export const Hero = async () => {
           <IoLogoInstagram className="group-hover-fill h-6 w-6" />
         </a>
       </div>
-      <h1 className='title-hidden'>Барбершоп Pride – чоловічі стрижки на Нивках, Київ</h1>
+      <h1 className='title-hidden'>Pride – чоловічі стрижки, Київ</h1>
       <h2 className="font-archivo-black relative z-10 mx-auto mt-60 max-w-[750px] text-center text-[38px]/[46px] xl:mt-[174px] xl:text-[96px]/[124px]">
         PRIDE BARBERSHOP
       </h2>

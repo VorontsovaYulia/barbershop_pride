@@ -23,9 +23,10 @@ export default async function Gallery() {
 
   return (
     <div className="px-6 pt-6 pb-4 xl:px-18 xl:pt-10 xl:pb-21">
-      <h1 className="mb-6 text-center text-[22px]/[30px] uppercase italic xl:mb-14 xl:text-[36px]/[42px]">
+      <h1 className='title-hidden'>Чоловічі стрижки, камуфляж сивини, SPA-догляд, депіляція</h1>
+      <h2 className="mb-6 text-center text-[22px]/[30px] uppercase italic xl:mb-14 xl:text-[36px]/[42px]">
         {t('gallery')}
-      </h1>
+      </h2>
 
       {/* Mobile */}
       <ul className="flex flex-wrap justify-center gap-4 xl:hidden">
@@ -47,9 +48,9 @@ export default async function Gallery() {
           if (item.type === 'text') {
             return (
               <li key={index} className="flex flex-col justify-center py-12">
-                <h2 className="mb-4 text-[16px] uppercase italic">
+                <h3 className="mb-4 text-[16px] uppercase italic">
                   {t(item.titleKey)}
-                </h2>
+                </h3>
                 <p className="text-sm">{t(item.descriptionKey)}</p>
               </li>
             );
@@ -83,9 +84,9 @@ export default async function Gallery() {
                 key={index}
                 className="flex h-[380px] w-[300px] flex-col justify-center"
               >
-                <h2 className="mb-4 text-[16px] uppercase italic">
+                <h3 className="mb-4 text-[16px] uppercase italic">
                   {t(item.titleKey)}
-                </h2>
+                </h3>
                 <p className="text-[16px]">{t(item.descriptionKey)}</p>
               </li>
             );
