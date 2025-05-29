@@ -70,12 +70,6 @@ export default async function RootLayout({ children, params }) {
         <meta name="twitter:site" content="@pridebarbershop" />
         <meta name="twitter:creator" content="@pridebarbershop" />
         
-        <link
-          rel="preload"
-          as="image"
-          href="/images/hero_mob.webp"
-          type="image/webp"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

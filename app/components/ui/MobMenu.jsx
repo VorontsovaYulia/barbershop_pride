@@ -1,16 +1,17 @@
 'use client';
 
-import { useEffect } from 'react';
-import { IoClose } from 'react-icons/io5';
-import { IoLogoInstagram } from 'react-icons/io5';
+import { keyNames } from '@/app/lib/navLinks';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useTranslations, useLocale } from 'next-intl';
-import { keys } from '@/app/lib/navLinks';
+import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
+import { IoClose, IoLogoInstagram } from 'react-icons/io5';
 
 export const MobMenu = ({ animation, onClose }) => {
   const t = useTranslations('Header.navigation');
   const c = useTranslations('Header');
   const locale = useLocale();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleKeyDown = event => {
@@ -49,15 +50,15 @@ export const MobMenu = ({ animation, onClose }) => {
       </button>
 
       <ul className="mt-[136px] flex flex-col items-center gap-8 text-[24px]/[30px]">
-        {keys.map(key => (
-          <li key={key}>
+        {keyNames.map(keyName => (
+          <li key={keyName}>
             <Link
-              href={`/${locale}/#${t(`${key}.anchor`)}`}
+              href={`/${t(`${keyName}.anchor`)}`}
               scroll={true}
-              className="hover-text"
+              className={`hover-text ${pathname === `/${locale}${t(`${keyName}.anchor`)}` ? 'text-white' : ''}`}
               onClick={onClose}
             >
-              {t(`${key}.name`)}
+              {t(`${keyName}.name`)}
             </Link>
           </li>
         ))}

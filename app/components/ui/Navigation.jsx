@@ -1,22 +1,26 @@
-import { getTranslations, getLocale } from 'next-intl/server';
-import Link from 'next/link';
-import { keys } from '@/app/lib/navLinks';
+'use client';
 
-export const Navigation = async ({ onClose }) => {
-  const t = await getTranslations('Header.navigation');
-  const locale = await getLocale();
+import { keyNames } from '@/app/lib/navLinks';
+import { Link } from '@/i18n/navigation';
+import { useLocale, useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
+
+export const Navigation = ({ onClose }) => {
+  const t = useTranslations('Header.navigation');
+  const locale = useLocale();
+  const pathname = usePathname();
 
   return (
     <>
-      {keys.map(key => (
-        <li key={key}>
+      {keyNames.map(keyName => (
+        <li key={keyName}>
           <Link
-            href={`/${locale}/#${t(`${key}.anchor`)}`}
+            href={`/${t(`${keyName}.anchor`)}`}
             scroll={true}
-            className="hover-text"
+            className={`hover-text ${pathname === `/${locale}${t(`${keyName}.anchor`)}` ? 'text-white' : ''}`}
             onClick={onClose}
           >
-            {t(`${key}.name`)}
+            {t(`${keyName}.name`)}
           </Link>
         </li>
       ))}
