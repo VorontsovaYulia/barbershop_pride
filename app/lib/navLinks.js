@@ -1,1 +1,1 @@
-export const keys = ['barbers', 'services', 'gallery', 'contacts'];
+export const keyNames = ['main', 'gallery'];
