@@ -1,8 +1,8 @@
 'use client';
 
 import { keyNames } from '@/app/lib/navLinks';
+import { Link } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 import { IoClose, IoLogoInstagram } from 'react-icons/io5';
