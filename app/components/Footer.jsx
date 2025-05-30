@@ -1,14 +1,14 @@
-import Image from 'next/image';
 import Logo from '@images/logo.png';
-import { FaRegCopyright, FaInstagram } from 'react-icons/fa6';
-import { Navigation } from './ui/Navigation';
 import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
+import { FaInstagram, FaRegCopyright } from 'react-icons/fa6';
+import { Navigation } from './ui/Navigation';
 
 export const Footer = async () => {
   const t = await getTranslations('Logo');
   return (
     <footer className="relative flex flex-col justify-center px-4 pt-8 pb-4 xl:px-18 xl:pt-10 xl:pb-6">
-      <div className="mb-16 flex flex-wrap items-center justify-center xl:mb-[18px] xl:justify-between">
+      <div className="mb-16 flex flex-col items-center justify-center xl:mb-[18px] xl:flex-row xl:justify-between">
         <a href="/" aria-label={t('ariaLabel')}>
           <Image
             src={Logo}
@@ -16,7 +16,7 @@ export const Footer = async () => {
             className="hidden xl:block xl:h-20 xl:w-20"
           />
         </a>
-        <ul className="flex gap-7 xl:mr-[216px] xl:ml-[320px] xl:gap-12">
+        <ul className="flex gap-7 xl:gap-12">
           <Navigation />
         </ul>
         <div className="mt-8 flex items-center gap-2 xl:mt-0 xl:gap-4">
