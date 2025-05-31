@@ -34,6 +34,7 @@ export const Contacts = async () => {
         </ul>
         <a
           href="https://n599347.alteg.io/company/566325/personal/menu?o="
+          target="_blank"
           rel="nofollow noopener noreferrer"
           className="border-main xl:text-main hover:border-hover hover:text-hover block w-fit border-[0.5px] border-solid bg-white/1 px-6 py-[10px] inset-shadow-[0px_0px_68px_0px_rgba(221,216,216,0.05)] backdrop-blur-[48px] active:border-white active:text-white xl:px-[50px] xl:py-[17px]"
         >

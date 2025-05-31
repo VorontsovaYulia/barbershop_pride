@@ -20,6 +20,7 @@ export const Advantages = async () => {
                 className="xl:h-20 xl:w-22"
                 src={item.icon}
                 alt={item.description}
+                unoptimized
                 height={60}
                 width={66}
               />
