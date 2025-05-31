@@ -2,6 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Головна сторінка -->
+  <url>
+    <loc>https://pride-barbershop.com.ua/</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://pride-barbershop.com.ua/uk" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://pride-barbershop.com.ua/en" />
+    <lastmod>2025-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Мовні версії -->
   <url>
     <loc>https://pride-barbershop.com.ua/uk</loc>
     <xhtml:link rel="alternate" hreflang="uk" href="https://pride-barbershop.com.ua/uk" />
@@ -20,6 +31,7 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Галерея -->
   <url>
     <loc>https://pride-barbershop.com.ua/uk/gallery</loc>
     <xhtml:link rel="alternate" hreflang="uk" href="https://pride-barbershop.com.ua/uk/gallery" />
