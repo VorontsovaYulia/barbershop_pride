@@ -84,6 +84,7 @@ export const Barbers = async () => {
                     className="xl:h-12 xl:w-12"
                     src={item.icon}
                     alt="Altegio"
+                    unoptimized
                     height={40}
                     width={40}
                   />
