@@ -40,9 +40,6 @@ export async function generateMetadata({ params }) {
       index: true,
       follow: true,
     },
-    icons: {
-      icon: '/favicon.ico',
-    },
   };
 }
 
@@ -53,6 +50,11 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale} prefix="og: http://ogp.me/ns#">
       <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta property="og:title" content="Барбершоп Pride – стильні чоловічі стрижки. Київ, Нивки" />
         <meta property="og:description" content="Барбершоп Pride ✂️ Барбершоп на Нивках ▶️ Запишись онлайн ☎️ +380997774099 ✅ Чекаємо саме на тебе!" />
         <meta property="og:type" content="website" />
