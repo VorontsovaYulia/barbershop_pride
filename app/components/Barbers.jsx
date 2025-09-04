@@ -52,6 +52,7 @@ export const Barbers = async () => {
                   height={324}
                   className="absolute top-6 right-12 z-100 hidden group-focus:block xl:hidden xl:group-focus:hidden"
                   alt={item.description_for_img}
+                  loading="eager"
                 />
 
                 {/* Desktop */}
@@ -68,6 +69,7 @@ export const Barbers = async () => {
                   height={400}
                   className="hidden xl:absolute xl:top-8 xl:right-10 xl:z-100 xl:group-hover:block xl:group-focus:block"
                   alt={item.description_for_img}
+                  loading="eager"
                 />
               </Link>
               <div className="flex h-10 flex-row items-center gap-x-2 xl:gap-x-4">
