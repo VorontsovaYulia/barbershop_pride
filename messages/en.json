@@ -91,47 +91,47 @@
     "servicesAndPrices": [
       {
         "service": "Haircut",
-        "price": "700"
+        "price": "750"
       },
       {
         "service": "Beard",
-        "price": "500 "
+        "price": "550 "
       },
       {
         "service": "Combo (Haircut + Beard)",
-        "price": "  1100"
+        "price": "  1150"
       },
       {
         "service": "Clipper haircut",
-        "price": "500"
+        "price": "550"
       },
       {
         "service": "Kids' haircut",
-        "price": "650"
+        "price": "750"
       },
       {
         "service": "Long haircut",
-        "price": "850"
+        "price": "900"
       },
       {
         "service": "Medium-length haircut",
-        "price": "800"
+        "price": "850"
       },
       {
         "service": "Gray hair camouflage (head)",
-        "price": "  650"
+        "price": "  750"
       },
       {
         "service": "Gray hair camouflage (beard)",
-        "price": "600"
+        "price": "700"
       },
       {
         "service": "Hair styling",
-        "price": "200"
+        "price": "300"
       },
       {
         "service": "Mustache",
-        "price": "200"
+        "price": "250"
       },
       {
         "service": "Perfect eyebrows",
@@ -143,7 +143,7 @@
       },
       {
         "service": "Royal head shaving",
-        "price": " 650"
+        "price": " 700"
       },
       {
         "service": "Royal beard shaving",
