@@ -13,12 +13,12 @@ export const Barbers = async () => {
         {t('title')}
       </h3>
       <div className="flex items-center justify-end pr-2 pl-6 xl:justify-center xl:xl:pr-0 xl:pl-0">
-        <ul className="flex flex-col gap-y-6 xl:w-228 xl:flex-row xl:flex-wrap xl:justify-center xl:gap-x-44 xl:gap-y-12">
+        <ul className="flex flex-col gap-y-6 xl:w-228 xl:flex-row xl:justify-center xl:gap-x-26 xl:gap-y-12">
           {t.raw('barbers').map((item, idx) => (
             <li
               tabIndex="0"
               key={idx}
-              className="group relative flex w-78 flex-col items-end gap-y-1 xl:w-92 xl:gap-y-4 xl:nth-last-2:order-last"
+              className="group relative flex w-78 flex-col items-end gap-y-1 xl:w-92 xl:gap-y-4"
             >
               <Link
                 href={item.link}

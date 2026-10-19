@@ -36,18 +36,6 @@
     "title": "Barbers",
     "barbers": [
       {
-        "image_mob": "/images/barbers-Bohdan-mob.jpg",
-        "image_desk": "/images/barbers-Bohdan-desk.jpg",
-        "name": "Bogdan",
-        "image_hover_mob": "/images/barbers-Bohdan-mob-hover.jpg",
-        "image_hover_desk": "/images/barbers-Bohdan-desk-hover.jpg",
-        "text_hover": "From classics to trends",
-        "description_for_img": "Photo of Master Bogdan",
-        "icon": "/icons/barbers-altegio.svg",
-        "link": "https://n1364204.alteg.io/company/566325/personal/menu?o=m2644140",
-        "aria_label": "Link to Bogdan's Altegio"
-      },
-      {
         "image_mob": "/images/barbers-Kate-mob.jpg",
         "image_desk": "/images/barbers-Kate-desk.jpg",
         "name": "Katerina",
